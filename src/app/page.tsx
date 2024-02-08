@@ -1,9 +1,10 @@
 import Image from "next/image";
+import React from "react";
 
 export default function Home() {
   return (
     <>
-      <h1>hai</h1>
+      <h1 className=" text-red-800">hai</h1>
     </>
   );
 }

@@ -1,10 +1,10 @@
 import React from "react";
-import Login from "../../components/Logincopy";
+import Login from "../../components/Login";
 
 export default function LoginPage() {
   return (
-    <main>
+    <section className=" bg-slate-900">
       <Login />
-    </main>
+    </section>
   );
 }
