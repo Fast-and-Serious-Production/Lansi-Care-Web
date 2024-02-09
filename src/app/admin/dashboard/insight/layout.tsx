@@ -7,7 +7,7 @@ import SessionProvider from "../../SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Login",
+  title: "Dashboard | Insight",
   description: "Welcome to the LansiCare App!",
 };
 

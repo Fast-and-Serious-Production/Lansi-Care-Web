@@ -10,6 +10,7 @@ export default function Admin() {
       redirect("admin/dashboard/login");
     },
   });
+  redirect("/admin/dashboard/insight");
   return (
     <main className=" p-8">
       <div className=" text-white">{session?.data?.user?.email}</div>
@@ -19,5 +20,4 @@ export default function Admin() {
     </main>
   );
 }
-
 Admin.requireAuth = true;
