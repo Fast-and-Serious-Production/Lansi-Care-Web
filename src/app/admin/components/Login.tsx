@@ -14,7 +14,7 @@ export default function Login() {
         <div className="bg-gray-800/30 max-w-xl max-h-3xl m-auto w-full h-fit pb-12 pt-5 rounded-lg">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2 className="mt-10 text-start text-3xl font-bold leading-9 tracking-tight text-white font-inter">Login</h2>
-            <p className=" mt-4 text-white font-inter text-base">Login for admin panel</p>
+            <p className=" mt-4 text-white font-inter text-base">Login for LansiCare admin panel</p>
             <hr className=" fill-white my-5" />
           </div>
 
