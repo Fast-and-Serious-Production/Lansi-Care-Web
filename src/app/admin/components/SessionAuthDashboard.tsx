@@ -4,15 +4,15 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 export default function SessionAuthDashboard() {
-  const session = useSession({
-    required: true,
-    onUnauthenticated() {
-      redirect("./dashboard/login");
-    },
-  });
+  // const session = useSession({
+  //   required: true,
+  //   onUnauthenticated() {
+  //     redirect("./dashboard/login");
+  //   },
+  // });
   return (
     <div>
-      <div className=" text-white">{session?.data?.user?.email}</div>
+      {/* <div className=" text-white">{session?.data?.user?.email}</div> */}
       <button type="button" className=" text-white" onClick={() => signOut()}>
         signOut
       </button>

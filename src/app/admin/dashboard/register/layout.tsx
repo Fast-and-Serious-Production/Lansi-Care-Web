@@ -3,12 +3,11 @@ import { Inter } from "next/font/google";
 import "../../../globals.css";
 
 import SessionProvider from "../../SessionProvider";
-import Sidebar from "../../components/content/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dashboard | Insight",
+  title: "Register | Admin",
   description: "Welcome to the LansiCare App!",
 };
 
@@ -20,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <SessionProvider>{children}</SessionProvider>
+        {/* <SessionProvider> */}
+        {children}
+        {/* </SessionProvider> */}
       </body>
     </html>
   );

@@ -3,12 +3,11 @@ import { Inter } from "next/font/google";
 import "../../../globals.css";
 
 import SessionProvider from "../../SessionProvider";
-import Sidebar from "../../components/content/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dashboard | Insight",
+  title: "Dashboard | Add Pasien",
   description: "Welcome to the LansiCare App!",
 };
 
