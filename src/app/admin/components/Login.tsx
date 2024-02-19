@@ -111,14 +111,7 @@ export default function Login() {
                     >
                       Login
                     </button>
-                    <button
-                      className="w-full bg-black text-white py-2 rounded hover:bg-gray-800"
-                      onClick={() => {
-                        signIn("github");
-                      }}
-                    >
-                      Sign In with Github
-                    </button>
+
                     <p className="text-red-600 text-sm mb-4">{error && error}</p>
                     <Link className="text-white text-sm font-inter hover:text-blue-300" href="/admin/dashboard/register">
                       Register to create account

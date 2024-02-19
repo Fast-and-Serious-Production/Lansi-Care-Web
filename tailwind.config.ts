@@ -34,6 +34,7 @@ const config: Config = {
         "indigo-400": "#818cf8",
         "purple-gradient": "#A78BFA",
         "blue-gradient": "#2563EB ",
+        "Navbar-Hover": "#007998",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
