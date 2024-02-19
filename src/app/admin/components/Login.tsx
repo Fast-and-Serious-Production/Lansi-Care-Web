@@ -11,7 +11,7 @@ export default function Login() {
 
   useEffect(() => {
     if (sessionStatus === "authenticated") {
-      router.replace("/admin");
+      router.replace("/admin/dashboard/insight");
     }
   }, [sessionStatus, router]);
 

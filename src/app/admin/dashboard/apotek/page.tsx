@@ -7,11 +7,11 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 
 export default function ApotekPage() {
-  const { data: session }: any = useSession();
+  // const { data: session }: any = useSession();
 
   return (
     <>
-      {!session ? (
+      {/* {!session ? (
         <>
           <section className=" w-full flex justify-center items-center h-screen">
             <Link href="/admin/dashboard/login" className="px-3 rounded-lg text-white bg-darkBlue group py-3 max-w-xl">
@@ -19,21 +19,22 @@ export default function ApotekPage() {
             </Link>
           </section>
         </>
-      ) : (
-        <div>
-          <SessionAuth />;
-          <div className="flex">
-            <Sidebar />
+      ) : ( */}
+      <div>
+        <SessionAuth />;
+        <div className="flex">
+          <Sidebar />
 
-            <div className="max-w-full w-3/4 ml-64">
-              <Headers name="APOTEK" />
-              <div className="max-w-lg absolute right-0 top-0 mx-4">
-                <p className=" text-base font-medium text-white bg-gray-800 py-4 px-5 rounded-full w-full mt-7 text-center">Logged in! : {session.user?.email}</p>
-              </div>
+          <div className="max-w-full w-3/4 ml-64">
+            <Headers name="APOTEK" />
+            <div className="max-w-lg absolute right-0 top-0 mx-4">
+              <p className=" text-base font-medium text-white bg-gray-800 py-4 px-5 rounded-full w-full mt-7 text-center">Logged in! :</p>
             </div>
+            
           </div>
         </div>
-      )}
+      </div>
+      {/* // )} */}
     </>
   );
 }

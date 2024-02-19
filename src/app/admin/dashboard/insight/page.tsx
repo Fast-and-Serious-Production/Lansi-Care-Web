@@ -7,6 +7,7 @@ import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import MainDashboard from "../../components/content/MainDashboard";
 
 export default function InsightPages() {
   const { data: session }: any = useSession();
@@ -32,6 +33,7 @@ export default function InsightPages() {
               <div className="max-w-lg absolute right-0 top-0 mx-4">
                 <p className=" text-base font-medium text-white bg-gray-800 py-4 px-5 rounded-full w-full mt-7 text-center">Logged in! : {session.user?.email}</p>
               </div>
+              <MainDashboard />
             </div>
           </div>
         </div>
