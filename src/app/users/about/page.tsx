@@ -16,15 +16,15 @@ export default function about() {
       <div className="relative mb-20 mt-10 justify-center mx-auto place-items-center max-h-full h-full grid grid-cols-4">
         <div className="relative w-52 pt-20">
         <Image src={image1} alt="image" className="rounded-xl" />
-        </div>
+      </div>
 
-        <div className="relative w-52">
+      <div className="relative w-52">
         <Image src={image2} alt="image" className="rounded-xl"/>
-        </div>
+      </div>
 
-        <div className="relative w-52 pt-20">
+      <div className="relative w-52 pt-20">
         <Image src={image3} alt="image" className="rounded-xl"/>
-        </div>
+      </div>
 
       <div className="relative w-52">
         <Image src={image4} alt="image" className="rounded-xl"/>
@@ -35,10 +35,10 @@ export default function about() {
     <div className="relative mx-40 h-full my-40">
       <div className="mt-10 ml-20">
           <div className="">
-            <h1 className="font-bold text-4xl flex justify-start">Who</h1>
-            <h3 className="break-words font-bold text-4xl text-darkBlue ml-5">are we</h3>
+            <h1 className="font-bold text-5xl flex justify-start">Who</h1>
+            <h3 className="break-words font-bold text-5xl text-darkBlue ml-5">are we</h3>
           </div>
-          <div>
+          <div className="font-medium">
             <p className="text-left flex justify-end mr-20 ml-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, eligendi accusamus impedit, sunt excepturi tenetur odio cum et quos iste quaerat sequi molestiae aspernatur, nostrum laborum. Saepe minus mollitia magni tenetur necessitatibus excepturi ipsum reprehenderit beatae nesciunt quod inventore odit repellendus eum ut ipsa, placeat odio animi fugiat veniam? Iste, quis culpa fugit vitae natus quod aspernatur, dolorum fuga eaque eos aperiam rem et saepe modi perferendis. Blanditiis nesciunt rem qui, tempore, sapiente corrupti nulla vero amet reprehenderit dolor molestias.</p>
             <br />
             <p className="text-left flex justify-end mr-20 ml-80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus esse ipsam animi, necessitatibus voluptates aut? Nobis beatae exercitationem recusandae porro reiciendis veniam ab facilis libero error explicabo molestiae aliquam ea nulla maiores, deleniti expedita? Suscipit accusantium quidem ab repellendus pariatur molestias reprehenderit aliquid odio totam in, officiis ex quaerat sit?</p>
