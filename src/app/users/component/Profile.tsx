@@ -9,16 +9,15 @@ export default function Profile() {
     <section>
       <div className='flex flex-1 flex-col min-w-full justify-center lg:px-8 align-middle h-full mt-20 font-inter bg-base-50'>
         <div className="w-[1438px] h-[1149px] px-[35px] py-[17px] flex-col justify-start items-start gap-2.5 inline-flex">
-  <div className="w-[1417.48px] h-[1085.03px] relative">
-    
-    <button>
+        <div className="w-[1417.48px] h-[1085.03px] relative">
+
     <div className="w-[1370px] h-[711.72px] left-0 top-[0.98px] absolute bg-slate-50 rounded-[10px] shadow">
     <div className="w-[95px] h-[20px] pl-2 pr-1 py-[3px] left-[1247px] top-[524.41px] absolute rounded border border-black justify-start items-center inline-flex">
       <div className="text-black text-xs font-medium leading-none">See Details</div>
       <div className="w-3 h-3 relative" />
+      
       </div> 
     </div>
-    </button>
     
     <div>
     <button className="w-[110px] h-[20px] pl-2 pr-1 py-[3px] left-[1240px] top-[400px] absolute inline-flex">
@@ -44,10 +43,10 @@ export default function Profile() {
       <div className="grow shrink basis-0 flex-col justify-start items-start inline-flex">
         <div className="self-stretch text-black text-2xl font-medium leading-normal">Riwayat Penyakit</div>
       </div>
-      <div className="pl-2 pr-1 py-[3px] rounded border border-black justify-start items-center gap-0.5 flex">
+      <button className="pl-2 pr-1 py-[3px] rounded border border-black justify-start items-center gap-0.5 flex">
         <div className="text-black text-xs font-medium leading-none">See Details</div>
         <div className="w-3 h-3 relative" />
-      </div>
+      </button>
     </div>
     <div className="w-[1284px] h-[247px] left-[43px] top-[821px] absolute flex-col justify-center items-start gap-2 inline-flex">
       <div className="w-[1343px] justify-start items-center gap-2 inline-flex">

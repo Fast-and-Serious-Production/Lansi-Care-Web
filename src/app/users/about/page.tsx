@@ -21,8 +21,9 @@ export default function about() {
             <p className="text-base font-medium hidden group-hover:block text-center mt-3">Hipster</p>
           </div>
 
-          <div className="relative w-52">
+          <div className="relative w-52 hover:scale-105 hover:-translate-y-0 transition-all group">
             <Image src={image2} alt="image" className="rounded-xl" />
+            <p className="text-base font-medium hidden group-hover:block ">Naufal Nabil Ramadhan</p>
           </div>
 
           <div className="relative w-52 pt-20">
