@@ -14,7 +14,7 @@ export default function SigninUser() {
           </main>
           <main className="max-w-lg w-full">
             <div className="mb-5">
-              <h1 className="font-extrabold text-4xl justify-center text-center mt-20 mb-10">Hi User!</h1>
+              <h1 className="font-bold text-4xl justify-center text-center mt-20 mb-10">Hi User!</h1>
               <label htmlFor="name" className="block mb-2 text-sm font-semibold text-gray-900 dark:text-white">
                 Email
               </label>
