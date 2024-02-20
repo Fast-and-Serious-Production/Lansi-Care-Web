@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function SigninUser() {
   return (
     <>
-    <section className="flex flex-1 flex-col min-w-full justify-center lg:px-8 align-middle h-full mt-20 bg-base-50">
+      <section className="flex flex-1 flex-col min-w-full justify-center lg:px-8 align-middle h-full mt-20 bg-base-50">
         <section className=" max-w-7xl flex justify-around max-h-3xl m-auto w-full h-fit pb-12 pt-5 rounded-3xl shadow-md shadow-slate-600 bg-primary-1000">
           <main>
             <Image src={SigninImage} width={397.22} height={305.61} alt="SignIn Image" />
@@ -47,10 +47,10 @@ export default function SigninUser() {
                   <p className="font-medium text-[14px]">Forgot Password?</p>
                 </button>
                 <button
-                  type="button"
+                  type="submit"
                   className="text-white hover:text-black bg-black border-2 border-black focus:outline-none hover:bg-white focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                 >
-                  <p className="font-medium text-[14px]">Login</p>
+                  <p className="font-medium text-[14px]">Signin</p>
                 </button>
               </div>
             </div>

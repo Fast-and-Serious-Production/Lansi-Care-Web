@@ -3,8 +3,9 @@
 import React, { useEffect, useState } from "react";
 import SignupImage from "@/public/SignUpImageSide.png";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
+import Link from "next/link";
 
 export default function SignUpUser() {
   const [error, setError] = useState("");
@@ -64,6 +65,10 @@ export default function SignUpUser() {
   if (sessionStatus === "loading") {
     return <h1>Loading...</h1>;
   }
+
+  const redirectSignin = () => {
+    redirect("/users/siginin");
+  };
   return (
     sessionStatus !== "authenticated" && (
       <>
@@ -143,12 +148,12 @@ export default function SignUpUser() {
                     >
                       <p className="font-medium text-[14px]">Forgot Password?</p>
                     </button>
-                    <button
-                      type="button"
+                    <Link
+                      href={"/users/signin"}
                       className="text-white hover:text-black bg-black border-2 border-black focus:outline-none hover:bg-white focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     >
-                      <p className="font-medium text-[14px]">Sign In</p>
-                    </button>
+                      <p className="font-medium text-[14px] text-center">Sign In</p>
+                    </Link>
                   </div>
                 </div>
               </form>
