@@ -8,7 +8,7 @@ export default function SignUpUser() {
   return (
     <>
       <section className="flex flex-1 flex-col min-w-full justify-center lg:px-8 align-middle h-full mt-20">
-        <section className=" max-w-7xl flex justify-around max-h-3xl m-auto w-full h-fit pb-12 pt-5 rounded-lg shadow-sm shadow-slate-600">
+        <section className=" max-w-7xl flex justify-around max-h-3xl m-auto w-full h-fit pb-12 pt-5 rounded-2xl shadow-sm shadow-slate-600">
           <main>
             <Image src={SignupImage} width={397.22} height={305.61} alt="SignUp Image" />
           </main>
