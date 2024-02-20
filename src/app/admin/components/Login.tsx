@@ -20,10 +20,10 @@ export default function Login() {
     return emailRegex.test(email);
   };
 
-  const handleSubmit = async (e: any) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const email = e.target[0].value;
-    const password = e.target[1].value;
     console.log(email, password);
     console.log(sessionStatus);
 
@@ -77,6 +77,8 @@ export default function Login() {
                         id="email"
                         name="email"
                         type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         autoComplete="email"
                         placeholder="Email"
                         required
@@ -98,6 +100,8 @@ export default function Login() {
                         type="password"
                         autoComplete="current-password"
                         placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         required
                         className="block w-full rounded-md bg-white/5 py-2.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:shadow-sm outline-none focus:shadow-white focus:ring-white sm:text-sm sm:leading-6 border-2 border-white placeholder:text-white placeholder:text-sm"
                       />

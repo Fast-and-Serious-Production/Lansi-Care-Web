@@ -17,7 +17,8 @@ export default function about() {
         <div className="relative mb-20 mt-10 justify-center mx-auto place-items-center max-h-full h-full grid grid-cols-4">
           <div className="relative w-52 pt-20 hover:scale-105 hover:-translate-y-10 transition-all group">
             <Image src={image1} alt="image" className="rounded-xl" />
-            <p className="text-base font-medium hidden group-hover:block ">Muhammad Keefa Syawal</p>
+            <p className="text-lg font-medium hidden group-hover:block text-center mt-3">Muhammad Keefa Syawal</p>
+            <p className="text-base font-medium hidden group-hover:block text-center mt-3">Hipster</p>
           </div>
 
           <div className="relative w-52">
