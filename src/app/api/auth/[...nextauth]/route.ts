@@ -20,29 +20,29 @@ export const authOptions: any = {
       async authorize(credentials: any) {
         await connect();
         try {
-          const user = await Admin.findOne({ email: credentials.email });
+          const user = (await Admin.findOne({ email: credentials.email })) || (await Pasien.findOne({ email: credentials.email }));
           if (user) {
             const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
             if (isPasswordCorrect) {
               return user;
             }
           }
-          const pasien = await Pasien.findOne({ email: credentials.email });
-          if (pasien) {
-            const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
-            if (isPasswordCorrect) {
-              return pasien;
-            }
-          }
+          // const pasien = await Pasien.findOne({ email: credentials.email });
+          // if (pasien) {
+          //   const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
+          //   if (isPasswordCorrect) {
+          //     return pasien;
+          //   }
+          // }
         } catch (err: any) {
           throw new Error(err);
         }
       },
     }),
-    // GithubProvider({
-    //   clientId: process.env.GITHUB_ID ?? "",
-    //   clientSecret: process.env.GITHUB_SECRET ?? "",
-    // }),
+    GithubProvider({
+      clientId: process.env.GITHUB_ID ?? "",
+      clientSecret: process.env.GITHUB_SECRET ?? "",
+    }),
     // ...add more providers here
   ],
   callbacks: {
@@ -53,7 +53,7 @@ export const authOptions: any = {
       if (account?.provider == "github") {
         await connect();
         try {
-          const existingUser = await Admin.findOne({ email: user.email });
+          const existingUser = (await Admin.findOne({ email: user.email })) || (await Pasien.findOne({ email: user.email }));
           if (!existingUser) {
             const newAdmin = new Admin({
               email: user.email,
@@ -62,15 +62,15 @@ export const authOptions: any = {
             await newAdmin.save();
             return true;
           }
-          const existingPasien = await Pasien.findOne({ email: user.email });
-          if (!existingPasien) {
-            const newPasien = new Pasien({
-              email: user.email,
-            });
+          // const existingPasien = await Pasien.findOne({ email: user.email });
+          // if (!existingPasien) {
+          //   const newPasien = new Pasien({
+          //     email: user.email,
+          //   });
 
-            await newPasien.save();
-            return true;
-          }
+          //   await newPasien.save();
+          //   return true;
+          // }
           return true;
         } catch (err) {
           console.log("Error saving user", err);

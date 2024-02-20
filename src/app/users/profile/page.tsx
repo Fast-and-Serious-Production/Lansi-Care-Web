@@ -2,11 +2,11 @@ import React from "react";
 import Profile from "../component/Profile";
 
 export default function profile() {
-  return( 
+  return (
     <>
-  <section className="w-screen h-screen">
-    <Profile/>
-  </section>
-  </>
-  )
+      <div className="w-screen h-screen">
+        <Profile />
+      </div>
+    </>
+  );
 }
