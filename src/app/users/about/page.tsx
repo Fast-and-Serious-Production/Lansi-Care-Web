@@ -6,13 +6,12 @@ import image4 from "@/public/X RPL 8_31_Rakha Adrian Nur Tanaya.jpg";
 import Image from "next/image";
 
 export default function about() {
-  return (
-    <>
-      <main>
-        <div className="mt-40 mx-auto">
-          <h6 className="text-center m-1 text-xl">About us</h6>
-          <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
-        </div>
+  return <>
+    <section>
+      <div className="mt-40 mx-auto">
+        <h6 className="text-center m-1 text-xl">About us</h6>
+        <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+      </div>
 
         <div className="relative mb-20 mt-10 justify-center mx-auto place-items-center max-h-full h-full grid grid-cols-4">
           <div className="relative w-52 pt-20">
@@ -56,8 +55,8 @@ export default function about() {
               </p>
             </div>
           </div>
-        </div>
-      </main>
-    </>
-  );
+      </div>
+    </div>
+    </section>
+  </>;
 }
