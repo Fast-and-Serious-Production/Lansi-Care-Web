@@ -14,7 +14,7 @@ export default function SignUpUser() {
 
   useEffect(() => {
     if (sessionStatus === "authenticated") {
-      router.replace("/user");
+      router.replace("/users");
     }
   }, [sessionStatus, router]);
 
