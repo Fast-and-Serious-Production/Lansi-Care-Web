@@ -22,24 +22,30 @@ export default function AboutPage() {
           <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
         </div>
 
-        <div className="relative mb-20 mt-10 justify-center mx-auto place-items-center max-h-full h-full grid grid-cols-4">
-          <div className="relative w-52 pt-20 hover:scale-105 hover:-translate-y-10 transition-all group">
-            <Image src={image1} alt="image" className="rounded-xl" />
-            <p className="text-lg font-medium hidden group-hover:block text-center mt-3">Muhammad Keefa Syawal</p>
-            <p className="text-base font-medium hidden group-hover:block text-center mt-3">Hipster</p>
+        <div className="relative mb-20 mt-[400px] w-full h-10 grid grid-cols-4">
+          <div className="relative flex justify-center">
+            <div className="absolute w-52 -top-64 hover:scale-105 transition-all group">
+              <Image src={image1} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Muhammad Keefa Syawal (Hipster)</p>
+            </div>
           </div>
-
-          <div className="relative w-52 hover:scale-105 hover:-translate-y-0 transition-all group">
-            <Image src={image2} alt="image" className="rounded-xl" />
-            <p className="text-base font-medium hidden group-hover:block ">Naufal Nabil Ramadhan</p>
+          <div className="relative flex justify-center">
+            <div className="absolute w-52 -top-32 hover:scale-105 transition-all group">
+              <Image src={image2} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Naufal Nabil Ramadhan (Hacker)</p>
+            </div>
           </div>
-
-          <div className="relative w-52 pt-20">
-            <Image src={image3} alt="image" className="rounded-xl" />
+          <div className="relative flex justify-center">
+            <div className="absolute w-52 -top-64 hover:scale-105 transition-all group">
+              <Image src={image3} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Raisya Ramadhani Achmad (Husler)</p>
+            </div>
           </div>
-
-          <div className="relative w-52">
-            <Image src={image4} alt="image" className="rounded-xl" />
+          <div className="relative flex justify-center">
+            <div className="absolute -top-32 w-52 hover:scale-105  transition-all group">
+              <Image src={image4} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Rakha Ardian Nur Tanaya (Leader)</p>
+            </div>
           </div>
         </div>
 

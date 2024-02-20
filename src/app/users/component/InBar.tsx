@@ -1,3 +1,4 @@
+"use client";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
@@ -15,7 +16,7 @@ export default function InBar() {
           </a>
           {/* {!isLoggedIn ? ( */}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button className="block p-2 rounded-lg group" type="button" onClick={() => signOut}>
+            <button className="block p-2 rounded-lg group" type="button" onClick={() => signOut()}>
               <svg className="flex-shrink-0 w-5 h-5 mx-auto transition duration-75 text-black group-hover: group-hover:text-red-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
               </svg>
