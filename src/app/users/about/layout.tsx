@@ -8,7 +8,7 @@ import NavBar from "../component/NavBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Register | Admin",
+  title: "About | LansiCare",
   description: "Welcome to the LansiCare App!",
 };
 
@@ -20,8 +20,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-      <NavBar />
-
         <SessionProvider>{children}</SessionProvider>
       </body>
     </html>

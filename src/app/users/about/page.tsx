@@ -1,14 +1,22 @@
+"use client";
 import React from "react";
 import image1 from "@/public/X RPL 8_22_Muhammad Keefa Syawal.jpg";
 import image2 from "@/public/X RPL 8_26_Naufal Nabil Ramadhan.jpg";
 import image3 from "@/public/X RPL 8_30_Raisya Ramadhani Achmad.jpg";
 import image4 from "@/public/X RPL 8_31_Rakha Adrian Nur Tanaya.jpg";
 import Image from "next/image";
+import NavBar from "../component/NavBar";
+import InBar from "../component/InBar";
+import { useSession } from "next-auth/react";
 
-export default function about() {
+export default function AboutPage() {
+  const { data: session } = useSession();
+
   return (
     <>
       <div>
+        {!session ? <NavBar /> : <InBar />}
+
         <div className="mt-40 mx-auto">
           <h6 className="text-center m-1 text-xl">About us</h6>
           <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
