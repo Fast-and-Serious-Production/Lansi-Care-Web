@@ -4,6 +4,7 @@ import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import Admin from "@/src/models/Admin";
+import Pasien from "@/src/models/Pasien";
 import connect from "@/src/utils/db";
 
 export const authOptions: any = {
@@ -24,6 +25,13 @@ export const authOptions: any = {
             const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
             if (isPasswordCorrect) {
               return user;
+            }
+          }
+          const pasien = await Pasien.findOne({ email: credentials.email });
+          if (pasien) {
+            const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
+            if (isPasswordCorrect) {
+              return pasien;
             }
           }
         } catch (err: any) {
@@ -47,11 +55,20 @@ export const authOptions: any = {
         try {
           const existingUser = await Admin.findOne({ email: user.email });
           if (!existingUser) {
-            const newUser = new Admin({
+            const newAdmin = new Admin({
               email: user.email,
             });
 
-            await newUser.save();
+            await newAdmin.save();
+            return true;
+          }
+          const existingPasien = await Pasien.findOne({ email: user.email });
+          if (!existingPasien) {
+            const newPasien = new Pasien({
+              email: user.email,
+            });
+
+            await newPasien.save();
             return true;
           }
           return true;

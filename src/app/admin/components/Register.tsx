@@ -37,7 +37,7 @@ export default function Register() {
     }
 
     try {
-      const res = await fetch("/api/register", {
+      const res = await fetch("/api/admin/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

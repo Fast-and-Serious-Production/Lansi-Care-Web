@@ -14,6 +14,10 @@ const pasienSchema = new Schema(
   {
     nfcId: Number,
     email: String,
+    password: {
+      type: String,
+      required: false,
+    },
     riwayatPenyakit: String,
     pasienStatus: String,
     nama: String,
