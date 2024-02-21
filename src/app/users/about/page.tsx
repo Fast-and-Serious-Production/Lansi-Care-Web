@@ -44,7 +44,7 @@ export default function AboutPage() {
           <div className="relative flex justify-center">
             <div className="absolute -top-32 w-52 hover:scale-105  transition-all group">
               <Image src={image4} alt="image" className="rounded-[6px] group-hover:ring-4 group-hover:ring-slate-300" />
-              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Rakha Ardian Nur Tanaya (Leader)</p>
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Rakha Adrian Nur Tanaya (Leader)</p>
             </div>
           </div>
         </div>
