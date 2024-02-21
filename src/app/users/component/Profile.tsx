@@ -7,9 +7,9 @@ import Imageprofile from "@/public/userdefault.png";
 export default function Profile() {
   return (
     <section>
-      <div className="flex flex-1 flex-col min-w-full justify-center lg:px-8 align-middle h-full mt-20 font-inter bg-base-50">
-        <div className="w-[1438px] h-[1149px] px-[35px] py-[17px] flex-col justify-start items-start gap-2.5 inline-flex">
-          <div className="w-[1417.48px] h-[1085.03px] relative">
+      <div className="flex flex-1 flex-col max-w-full justify-center lg:px-8 align-middle h-full mt-20 font-inter bg-base-50">
+        <div className="w-[1430px] h-[1149px] py-[17px] mx-auto justify-center place-items-center items-center inline-flex">
+          <div className="w-[1417px] h-[1085px] relative">
             <div className="w-[1370px] h-[711.72px] left-0 top-[0.98px] absolute bg-slate-50 rounded-[10px] shadow">
               <div className="w-[95px] h-[20px] pl-2 pr-1 py-[3px] left-[1247px] top-[524.41px] absolute rounded border border-black justify-start items-center inline-flex">
                 <div className="text-black text-xs font-medium leading-none">See Details</div>

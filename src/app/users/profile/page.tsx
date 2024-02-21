@@ -11,7 +11,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      {!session ? (
+      {/* {!session ? (
         <>
           {!session ? <NavBar /> : <InBar />}
 
@@ -26,12 +26,12 @@ export default function ProfilePage() {
             </div>
           </div>
         </>
-      ) : (
+       ) : (  */}
         <div className="w-screen h-screen">
           {!session ? <NavBar /> : <InBar />}
           <Profile />
         </div>
-      )}
+      {/* )} */}
     </>
   );
 }
