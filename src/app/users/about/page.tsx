@@ -25,25 +25,25 @@ export default function AboutPage() {
         <div className="relative mb-20 mt-[400px] w-full h-10 grid grid-cols-4">
           <div className="relative flex justify-center">
             <div className="absolute w-52 -top-64 hover:scale-105 transition-all group">
-              <Image src={image1} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <Image src={image1} alt="image" className="rounded-[6px] group-hover:ring-4 group-hover:ring-slate-300" />
               <p className="text-base font-medium hidden group-hover:block text-center mt-3">Muhammad Keefa Syawal (Hipster)</p>
             </div>
           </div>
           <div className="relative flex justify-center">
             <div className="absolute w-52 -top-32 hover:scale-105 transition-all group">
-              <Image src={image2} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <Image src={image2} alt="image" className="rounded-[6px] group-hover:ring-4 group-hover:ring-slate-300" />
               <p className="text-base font-medium hidden group-hover:block text-center mt-3">Naufal Nabil Ramadhan (Hacker)</p>
             </div>
           </div>
           <div className="relative flex justify-center">
             <div className="absolute w-52 -top-64 hover:scale-105 transition-all group">
-              <Image src={image3} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <Image src={image3} alt="image" className="rounded-[6px] group-hover:ring-4 group-hover:ring-slate-300" />
               <p className="text-base font-medium hidden group-hover:block text-center mt-3">Raisya Ramadhani Achmad (Husler)</p>
             </div>
           </div>
           <div className="relative flex justify-center">
             <div className="absolute -top-32 w-52 hover:scale-105  transition-all group">
-              <Image src={image4} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <Image src={image4} alt="image" className="rounded-[6px] group-hover:ring-4 group-hover:ring-slate-300" />
               <p className="text-base font-medium hidden group-hover:block text-center mt-3">Rakha Ardian Nur Tanaya (Leader)</p>
             </div>
           </div>

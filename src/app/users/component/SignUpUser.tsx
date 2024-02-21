@@ -118,7 +118,7 @@ export default function SignUpUser() {
                 <div>
                   <button
                     type="submit"
-                    className="text-white bg-black focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 max-w-full"
+                    className="text-white bg-darkBlue focus:ring-4 focus:outline-none focus:ring-slate-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 max-w-full"
                   >
                     <p>Sign Up</p>
                   </button>
@@ -150,9 +150,9 @@ export default function SignUpUser() {
                     </button>
                     <Link
                       href={"/users/signin"}
-                      className="text-white hover:text-black bg-black border-2 border-black focus:outline-none hover:bg-white focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                      className="text-white hover:text-black bg-darkBlue border-2 border-darkBlue focus:outline-none hover:bg-white focus:ring-4 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     >
-                      <p className="font-medium text-[14px] text-center">Sign In</p>
+                      <p className="font-medium text-[14px] text-center">Login</p>
                     </Link>
                   </div>
                 </div>
