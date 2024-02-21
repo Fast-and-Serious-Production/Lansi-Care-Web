@@ -1,12 +1,21 @@
-import React from 'react'
-import homepage from '../component/HomePage';
 
-export default function Homepage() {
+"use client";
+import React from "react";
+import Homepage from "../component/HomePage";
+import NavBar from "../component/NavBar";
+import { useSession } from "next-auth/react";
+import InBar from "../component/InBar";
+
+export default function HomepagePages() {
+  const { data: session } = useSession();
+
   return (
     <>
-    <div className="w-screen h-screen">
-      <Homepage />
-    </div>
-  </>
-  )
+      <div className="w-screen h-screen">
+        {!session ? <NavBar /> : <InBar />}
+
+        <Homepage />
+      </div>
+    </>
+  );
 }

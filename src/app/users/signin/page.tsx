@@ -1,9 +1,18 @@
+"use client";
 import React from "react";
 import SigninUser from "../component/SigninUser";
+import NavBar from "../component/NavBar";
+import { useSession } from "next-auth/react";
+import InBar from "../component/InBar";
+import { redirect } from "next/navigation";
 
-export default function signin() {
+export default function SigninPage() {
+  const { data: session } = useSession();
+
   return (
     <div className="w-screen h-screen">
+      {!session ? <NavBar /> : <InBar />}
+
       <SigninUser />
     </div>
   );

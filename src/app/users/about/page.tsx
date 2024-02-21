@@ -1,37 +1,51 @@
+"use client";
 import React from "react";
 import image1 from "@/public/X RPL 8_22_Muhammad Keefa Syawal.jpg";
 import image2 from "@/public/X RPL 8_26_Naufal Nabil Ramadhan.jpg";
 import image3 from "@/public/X RPL 8_30_Raisya Ramadhani Achmad.jpg";
 import image4 from "@/public/X RPL 8_31_Rakha Adrian Nur Tanaya.jpg";
 import Image from "next/image";
+import NavBar from "../component/NavBar";
+import InBar from "../component/InBar";
+import { useSession } from "next-auth/react";
 
-export default function about() {
+export default function AboutPage() {
+  const { data: session } = useSession();
+
   return (
     <>
       <div>
+        {!session ? <NavBar /> : <InBar />}
+
         <div className="mt-40 mx-auto">
           <h6 className="text-center m-1 text-xl">About us</h6>
           <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
         </div>
 
-        <div className="relative mb-20 mt-10 justify-center mx-auto place-items-center max-h-full h-full grid grid-cols-4">
-          <div className="relative w-52 pt-20 hover:scale-105 hover:-translate-y-10 transition-all group">
-            <Image src={image1} alt="image" className="rounded-xl" />
-            <p className="text-lg font-medium hidden group-hover:block text-center mt-3">Muhammad Keefa Syawal</p>
-            <p className="text-base font-medium hidden group-hover:block text-center mt-3">Hipster</p>
+        <div className="relative mb-20 mt-[400px] w-full h-10 grid grid-cols-4">
+          <div className="relative flex justify-center">
+            <div className="absolute w-52 -top-64 hover:scale-105 transition-all group">
+              <Image src={image1} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Muhammad Keefa Syawal (Hipster)</p>
+            </div>
           </div>
-
-          <div className="relative w-52 hover:scale-105 hover:-translate-y-0 transition-all group">
-            <Image src={image2} alt="image" className="rounded-xl" />
-            <p className="text-base font-medium hidden group-hover:block ">Naufal Nabil Ramadhan</p>
+          <div className="relative flex justify-center">
+            <div className="absolute w-52 -top-32 hover:scale-105 transition-all group">
+              <Image src={image2} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Naufal Nabil Ramadhan (Hacker)</p>
+            </div>
           </div>
-
-          <div className="relative w-52 pt-20">
-            <Image src={image3} alt="image" className="rounded-xl" />
+          <div className="relative flex justify-center">
+            <div className="absolute w-52 -top-64 hover:scale-105 transition-all group">
+              <Image src={image3} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Raisya Ramadhani Achmad (Husler)</p>
+            </div>
           </div>
-
-          <div className="relative w-52">
-            <Image src={image4} alt="image" className="rounded-xl" />
+          <div className="relative flex justify-center">
+            <div className="absolute -top-32 w-52 hover:scale-105  transition-all group">
+              <Image src={image4} alt="image" className="rounded-xl group-hover:ring-4 group-hover:ring-slate-300" />
+              <p className="text-base font-medium hidden group-hover:block text-center mt-3">Rakha Ardian Nur Tanaya (Leader)</p>
+            </div>
           </div>
         </div>
 

@@ -58,8 +58,12 @@ export const authOptions: any = {
             const newAdmin = new Admin({
               email: user.email,
             });
+            const newPasien = new Pasien({
+              email: user.email,
+            });
 
             await newAdmin.save();
+            await newPasien.save();
             return true;
           }
           // const existingPasien = await Pasien.findOne({ email: user.email });
