@@ -14,6 +14,7 @@ export default function AboutPage() {
 
   return (
     <>
+    <section className="text-base-100">
       <div>
         {!session ? <NavBar /> : <InBar />}
 
@@ -75,6 +76,7 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      </section>
     </>
   );
 }

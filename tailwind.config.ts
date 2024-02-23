@@ -22,7 +22,7 @@ const config: Config = {
         cyanBlue: "#4b778d",
         mainGreen: "#34be82",
         limeGreen: "#6ac57f",
-        base: {"50":"#EEEEEF"},
+        base: {"50":"#EEEEEF","100":"#252525"},
         "gray-800": "#1f2937",
         "blue-200": "#BFDBFE",
         "sky-200": "#BAE6FD",

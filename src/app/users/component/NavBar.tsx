@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import LansicareLogo from "@/public/LansicareLogo.png";
+import LansicareLogo from "@/public/logo-baru.png";
 import Link from "next/link";
 
 import { signOut, useSession } from "next-auth/react";
@@ -12,8 +12,8 @@ export default function NavBar() {
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src={LansicareLogo} width={40} height={40} alt="Lansicare Logo Logo" />
-            <span className="self-center text-black text-xl font-medium whitespace-nowrap dark:text-white">LansiCare</span>
+            <Image src={LansicareLogo} width={150} height={40} alt="Lansicare Logo Logo" />
+            {/* <span className="self-center text-base-100 text-xl font-medium whitespace-nowrap dark:text-white">LansiCare</span> */}
           </a>
           {/* {!isLoggedIn ? ( */}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -44,7 +44,7 @@ export default function NavBar() {
                   className=" fill-black group-hover:fill-Navbar-Hover"
                 />
               </svg>
-              <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              <p className="text-base-100 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                 Sign Up
               </p>
             </Link>
@@ -69,12 +69,12 @@ export default function NavBar() {
                   className=" fill-black group-hover:fill-Navbar-Hover"
                 />
               </svg>
-              <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+              <p className="text-base-100 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                 Sign In
               </p>
             </Link>
             {/* <button className="flex items-center p-2 rounded-lg" onClick={() => handleLogout}>
-              <span className="flex-1 ms-3 text-black text-start">Logout</span>
+              <span className="flex-1 ms-3 text-base-100 text-start">Logout</span>
             </button> */}
           </div>
           {/* ) : ( */}
@@ -102,7 +102,7 @@ export default function NavBar() {
                       className=" fill-black group-hover:fill-Navbar-Hover"
                     />
                   </svg>
-                  <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <p className="text-base-100 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     Home
                   </p>
                 </Link>
@@ -129,7 +129,7 @@ export default function NavBar() {
                       className=" fill-black group-hover:fill-Navbar-Hover"
                     />
                   </svg>
-                  <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <p className="text-base-100 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     About
                   </p>
                 </Link>
@@ -164,7 +164,7 @@ export default function NavBar() {
                       </filter>
                     </defs>
                   </svg>
-                  <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <p className="text-base-100 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
                     Profile
                   </p>
                 </Link>
