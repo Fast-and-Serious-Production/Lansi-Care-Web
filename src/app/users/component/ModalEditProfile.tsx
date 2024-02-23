@@ -16,7 +16,7 @@ export default function ModalEditProfile({ isVisible, onClose, children }: any) 
     <>
       <div id="modalEdit" onClick={handleClose} className="">
         <div className="overflow-y-auto overflow-x-hidden z-50 fixed justify-center items-center w-full md:inset-0 max-h-full bg-black/10">
-          <div className="relative p-4 w-full mx-auto max-w-4xl max-h-full my-20 bg-white overflow-visible mt-40 rounded-md">
+          <div className="relative p-4 w-full mx-auto max-w-4xl max-h-full my-20 bg-white overflow-visible rounded-md">
             <div className="flex items-center justify-between p-4 md:p-5 ">
               <button
                 type="button"

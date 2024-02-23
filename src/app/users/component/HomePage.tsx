@@ -4,70 +4,89 @@ import React from "react";
 import Image from "next/image";
 import TrackingKesehatan from "@/public/track-kesehatan-contoh.jpg";
 import ResepObat from "@/public/obat-contoh.jpg";
+import Carousel from "./Carousel";
 
 export default function Homepage() {
   return (
     <>
-    {/* Home Carousel */}
+      {/* Home Carousel */}
       <section className="text-base-100">
-        <div className="bg-base-50 font-inter h-full justify-center align-middle pt-[100px] pb-[30px] mx-auto flex flex-col place-items-center">
-          <div className="w-[1367px] h-[500px] mt-[30px] mx-[35] bg-primary-1000 rounded-[10px] shadow-md flex">
-            <div className="w-96 h-6 px-10 flex-col justify-start items-start inline-flex mt-[45px]">
-              <div className="self-stretch text-neutral-800 text-5xl font-bold leading-normal">Home</div>
-            </div>   
-          </div>
-
+        <Carousel />
+        <div className="mx-auto flex h-full flex-col place-items-center justify-center bg-base-50 pb-[30px] pt-[100px] align-middle font-inter">
           {/* Fitur-fitur */}
-          <div className="w-[1366.48px] h-[420px] mt-[20px] mx-[35] bg-primary-1000 rounded-[10px] shadow-md">
-            <div className="w-96 h-6 px-10 mt-[33px] flex-col justify-start items-start inline-flex">
-              <div className="self-stretch text-neutral-800 text-xl font-semibold leading-normal">Fitur-fitur</div>
+          <div className="mx-[35] mt-[20px] h-auto w-[1366.48px] rounded-[10px] bg-primary-1000 pb-10 shadow-md">
+            <div className="mt-[33px] inline-flex h-6 w-96 flex-col items-start justify-start px-10">
+              <div className="self-stretch text-xl font-semibold leading-normal text-neutral-800">
+                Fitur-fitur
+              </div>
             </div>
 
             <div className="relative">
-            <div className="w-[86px] h-[22px] pl-2 pr-1 py-0.5 rounded border border-neutral-800 justify-start items-start absolute top-0 right-[45px] inline-flex flex-col">
-              <button className="text-neutral-800 text-xs font-normal ">See Details</button>
-              <div className="w-3 h-3 relative" />
-            </div>
-
-            <div className="mt-5 ml-10 flex space-x-10 grid-cols-2">
-              <div className="max-w-sm max-h-sm bg-primary-1000 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-                  <a href="#">
-                      <Image className="rounded-t-lg" src={TrackingKesehatan} alt="foto" />
-                  </a>
-                  <div className="p-5">
-                      <a href="#">
-                          <h5 className="mb-2 text-[16px] font-medium tracking-tight text-base-100 dark:text-white">Track Kesehatan</h5>
-                      </a>
-                      <p className="mb-3 font-normal text-[12px] text-base-100 dark:text-gray-400">Lacak Kesehatanmu Disini</p>
-                  </div>
+              <div className="absolute right-[45px] top-0 inline-flex h-[22px] w-[86px] flex-col items-start justify-start rounded border border-neutral-800 py-0.5 pl-2 pr-1">
+                <button className="text-xs font-normal text-neutral-800 ">
+                  See Details
+                </button>
+                <div className="relative h-3 w-3" />
               </div>
 
-              <div className="max-w-sm max-h-sm bg-primary-1000 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+              <div className="ml-10 mt-5 flex grid-cols-2 content-center space-x-10">
+                <div className="max-h-sm max-w-md rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
                   <a href="#">
-                      <Image className="rounded-t-lg" src={TrackingKesehatan} alt="foto"/>
+                    <Image
+                      className="rounded-t-lg"
+                      src={TrackingKesehatan}
+                      alt="foto"
+                    />
                   </a>
                   <div className="p-5">
-                      <a href="#">
-                          <h5 className="mb-2 text-[16px] font-medium tracking-tight text-base-100 dark:text-white">Resep Obat</h5>
-                      </a>
-                      <p className="mb-3 font-normal text-[12px] text-base-100 dark:text-gray-400">Lihat Resep Obatmu Disini</p>
+                    <a href="#">
+                      <h5 className="mb-2 text-[16px] font-medium tracking-tight text-base-100 dark:text-white">
+                        Track Kesehatan
+                      </h5>
+                    </a>
+                    <p className="mb-3 text-[12px] font-normal text-base-100 dark:text-gray-400">
+                      Lacak Kesehatanmu Disini
+                    </p>
                   </div>
-            </div>
-            </div>
+                </div>
+
+                <div className="max-h-sm max-w-md rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
+                  <a href="#">
+                    <Image
+                      className="rounded-t-lg"
+                      src={TrackingKesehatan}
+                      alt="foto"
+                    />
+                  </a>
+                  <div className="p-5">
+                    <a href="#">
+                      <h5 className="mb-2 text-[16px] font-medium tracking-tight text-base-100 dark:text-white">
+                        Resep Obat
+                      </h5>
+                    </a>
+                    <p className="mb-3 text-[12px] font-normal text-base-100 dark:text-gray-400">
+                      Lihat Resep Obatmu Disini
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
           {/* Komentar */}
-          <div className="w-[1366.48px] h-[233.31px] mt-[20px] mx-[35] bg-primary-1000 rounded-[10px] shadow-md">
-            <div className="w-96 h-6 px-10 mt-[33px] flex-col justify-start items-start inline-flex">
-              <div className="self-stretch text-neutral-800 text-xl font-semibold leading-normal">Komentar</div>
+          <div className="mx-[35] mt-[20px] h-[233.31px] w-[1366.48px] rounded-[10px] bg-primary-1000 shadow-md">
+            <div className="mt-[33px] inline-flex h-6 w-96 flex-col items-start justify-start px-10">
+              <div className="self-stretch text-xl font-semibold leading-normal text-neutral-800">
+                Komentar
+              </div>
             </div>
 
             <div className="relative">
-            <div className="w-[105px] h-[22px] pl-2 pr-1 py-0.5 rounded border border-neutral-800 justify-start items-start absolute top-0 right-[45px] inline-flex flex-col">
-              <button className="text-neutral-800 text-xs font-normal ">Write a Review</button>
-              <div className="w-3 h-3 relative" />
-            </div>
+              <div className="absolute right-[45px] top-0 inline-flex h-[22px] w-[105px] flex-col items-start justify-start rounded border border-neutral-800 py-0.5 pl-2 pr-1">
+                <button className="text-xs font-normal text-neutral-800 ">
+                  Write a Review
+                </button>
+                <div className="relative h-3 w-3" />
+              </div>
             </div>
           </div>
         </div>
