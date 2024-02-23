@@ -2,7 +2,7 @@
 import { signOut } from "next-auth/react";
 import Link from "next/link";
 import React from "react";
-import LansicareLogo from "@/public/LansicareLogo.png";
+import LansicareLogo from "@/public/logo-baru.png";
 import Image from "next/image";
 
 export default function InBar() {
@@ -11,8 +11,8 @@ export default function InBar() {
       <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src={LansicareLogo} width={40} height={40} alt="Lansicare Logo Logo" />
-            <span className="self-center text-base-100 text-[24px] font-medium whitespace-nowrap dark:text-white">LansiCare</span>
+            <Image src={LansicareLogo} width={150} height={40} alt="Lansicare Logo Logo" />
+            {/* <span className="self-center text-base-100 text-[24px] font-medium whitespace-nowrap dark:text-white">LansiCare</span> */}
           </a>
           {/* {!isLoggedIn ? ( */}
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
