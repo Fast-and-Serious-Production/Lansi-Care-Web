@@ -14,13 +14,14 @@ export const authOptions: any = {
       id: "credentials",
       name: "Credentials",
       credentials: {
+        nama: { label: "Nama", type: "text" },
         email: { label: "Email", type: "text" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials: any) {
         await connect();
         try {
-          const user = (await Admin.findOne({ email: credentials.email })) || (await Pasien.findOne({ email: credentials.email }));
+          const user = (await Admin.findOne({ email: credentials.email })) || (await Pasien.findOne({ email: credentials.email, nama: credentials.nama }));
           if (user) {
             const isPasswordCorrect = await bcrypt.compare(credentials.password, user.password);
             if (isPasswordCorrect) {
