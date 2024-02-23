@@ -8,6 +8,7 @@ import ResepObat from "@/public/obat-contoh.jpg";
 export default function Homepage() {
   return (
     <>
+    {/* Home Carousel */}
       <section className="text-base-100">
         <div className="bg-base-50 font-inter h-full justify-center align-middle pt-[100px] pb-[30px] mx-auto flex flex-col place-items-center">
           <div className="w-[1367px] h-[500px] mt-[30px] mx-[35] bg-primary-1000 rounded-[10px] shadow-md flex">
@@ -16,6 +17,7 @@ export default function Homepage() {
             </div>   
           </div>
 
+          {/* Fitur-fitur */}
           <div className="w-[1366.48px] h-[420px] mt-[20px] mx-[35] bg-primary-1000 rounded-[10px] shadow-md">
             <div className="w-96 h-6 px-10 mt-[33px] flex-col justify-start items-start inline-flex">
               <div className="self-stretch text-neutral-800 text-xl font-semibold leading-normal">Fitur-fitur</div>
@@ -40,7 +42,6 @@ export default function Homepage() {
                   </div>
               </div>
 
-
               <div className="max-w-sm max-h-sm bg-primary-1000 border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                   <a href="#">
                       <Image className="rounded-t-lg" src={TrackingKesehatan} alt="foto"/>
@@ -53,10 +54,10 @@ export default function Homepage() {
                   </div>
             </div>
             </div>
-
             </div>
           </div>
 
+          {/* Komentar */}
           <div className="w-[1366.48px] h-[233.31px] mt-[20px] mx-[35] bg-primary-1000 rounded-[10px] shadow-md">
             <div className="w-96 h-6 px-10 mt-[33px] flex-col justify-start items-start inline-flex">
               <div className="self-stretch text-neutral-800 text-xl font-semibold leading-normal">Komentar</div>
@@ -69,7 +70,6 @@ export default function Homepage() {
             </div>
             </div>
           </div>
-
         </div>
       </section>
     </>
