@@ -4,6 +4,9 @@ const { Schema } = mongoose;
 
 const adminSchema = new Schema(
   {
+    nama: {
+      type: String,
+    },
     email: {
       type: String,
       unique: true,

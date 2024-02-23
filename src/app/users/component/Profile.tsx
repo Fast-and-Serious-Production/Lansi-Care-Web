@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Imageprofile from "@/public/userdefault.png";
+import Pasien from "@/src/models/Pasien";
+import ModalEditProfile from "./ModalEditProfile";
+import { useRouter } from "next/navigation";
 
-type Pasien = {
+type Pasiens = {
   _id: number;
-  nfcId: number;
   email: string;
   riwayatPenyakit: string;
   pasienStatus: string;
@@ -25,36 +27,103 @@ type Pasien = {
   BerlakuHingga: Date;
   updatedAt: string;
 };
-export const getData = async () => {
-  try {
-    const res = await fetch("http://localhost:3000/api/topics", {
-      cache: "no-store",
-    });
+// export const getData = async () => {
+//   try {
+//     const res = await fetch("http://localhost:3000/api/topics", {
+//       cache: "no-store",
+//     });
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch topics");
-    }
+//     if (!res.ok) {
+//       throw new Error("Failed to fetch topics");
+//     }
 
-    return res.json();
-  } catch (error) {
-    console.log("Error loading topics: ", error);
-  }
-};
+//     return res.json();
+//   } catch (error) {
+//     console.log("Error loading topics: ", error);
+//   }
+// };
 
-export default function Profile() {
-  const [patients, setPatients] = useState<Pasien[]>([]);
+export default function Profile({
+  _id,
+  email,
+  riwayatPenyakit,
+  pasienStatus,
+  nama,
+  NIK,
+  TTL,
+  JenisKelamin,
+  Alamat,
+  RT,
+  RW,
+  KelurahanDesa,
+  Kecamatan,
+  Agama,
+  Pekerjaan,
+  Kewarganegaraan,
+}: {
+  _id: number;
+  email: string;
+  riwayatPenyakit: string;
+  pasienStatus: string;
+  nama: string;
+  NIK: number;
+  TTL: string;
+  JenisKelamin: string;
+  Alamat: string;
+  RT: number;
+  RW: number;
+  KelurahanDesa: string;
+  Kecamatan: string;
+  Agama: string;
+  Pekerjaan: string;
+  Kewarganegaraan: string;
+}): React.ReactElement {
+  const [newNama, setNewNama] = useState(nama);
+  const [newTTL, setNewTTL] = useState(TTL);
+  const [newAlamat, setNewAlamat] = useState(Alamat);
+  const [newRT, setNewRT] = useState(RT);
+  const [newRW, setNewRW] = useState(RW);
+  const [newJenisKelamin, setNewJenisKelamin] = useState(JenisKelamin);
+  const [newKelurahanDesa, setNewKelurahan_desa] = useState(KelurahanDesa);
+  const [newKecamatan, setNewKecamatan] = useState(Kecamatan);
+  const [newNIK, setNewNIK] = useState(NIK);
+  const [newEmail, setNewEmail] = useState(email);
+  const [newRiwayatPenyakit, setNewRiwayatPenyakit] = useState(riwayatPenyakit);
+  const [newStatus, setNewStatus] = useState(pasienStatus);
+  const [newAgama, setNewAgama] = useState(Agama);
+  const [newKewarganegaraan, setNewKewarganegaraan] = useState(Kewarganegaraan);
+  const [newPekerjaan, setNewPekerjaan] = useState(Pekerjaan);
+  const router = useRouter();
+  // const [patients, setPatients] = useState<Pasiens[]>([]);
+  // const [selectedPatient, setSelectedPatient] = useState<Pasiens | null>(null);
+  const [isMutating, setIsMutating] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { patients }: { patients: Pasien[] } = await getData();
-        setPatients(patients);
-      } catch (error) {
-        console.log("Error loading data: ", error);
+  const [modal, setModal] = useState(false);
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    setIsMutating(true);
+
+    try {
+      const res = await fetch(`http://localhost:3000/api/topics/${_id}`, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify({ newNama, newTTL, newAlamat, newRT, newRW, newJenisKelamin, newKelurahanDesa, newKecamatan, newNIK, newEmail, newRiwayatPenyakit, newStatus, newAgama, newKewarganegaraan, newPekerjaan }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to update Patient");
       }
-    };
-    fetchData();
-  }, []);
+      router.refresh();
+      alert(`Data Uppdated!`);
+      router.push("/admin/dashboard/dataPage");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <section>
       <div className="flex flex-1 flex-col max-w-full justify-center lg:px-8 align-middle h-full mt-20 font-inter bg-base-50">
@@ -71,26 +140,186 @@ export default function Profile() {
                 <Image src={Imageprofile} className="w-[300px] h-[300px] rounded-[150px] border-4 border-slate-50" alt="Image profile" />
               </div>
               <div className="w-[1346.55px] h-[125.20px] pl-[47.48px] top-[515.41px] relative">
-                {patients.map((Data) => (
-                  <div key={Data._id} className="flex justify-between">
-                    <div className="text-black text-[32px] font-semibold leading-10 tracking-wider mb-4">{Data.nama}</div>
-                    <button type="button" className="text-black bg-white border-2 border-black hover:bg-black hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 me-2 mb-2 absolute right-0 -top-36 py-2">
-                      Edit Profil
-                    </button>
-                    <button type="button" className="text-black bg-white border-2 border-black hover:bg-black hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 me-2 mb-2 absolute right-0 top-5 py-2">
-                      See Details
-                    </button>
+                <div className="flex justify-between">
+                  <div>
+                    <div className="text-black text-[32px] font-semibold leading-10 tracking-wider mb-4">{/* {session.user?.email} */}</div>
                   </div>
-                ))}
+                  <button
+                    onClick={() => setModal(true)}
+                    className="text-black bg-white border-2 border-black hover:bg-black hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 me-2 mb-2 absolute right-0 -top-36 py-2"
+                  >
+                    Edit Profil
+                  </button>
+                  {/* <input checked={modal} onChange={handleChange} type="checkbox" className="modal-toggle invisible" /> */}
+                  <button type="button" className="text-black bg-white border-2 border-black hover:bg-black hover:text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 me-2 mb-2 absolute right-0 top-5 py-2">
+                    See Details
+                  </button>
+                </div>
 
-                <button type="button" className="text-white bg-darkBlue border-2 border-darkBlue hover:bg-white hover:text-black focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 ">
-                  Lengkapi Profil
-                </button>
-
-                {/* <div className="text-black text-xl font-medium leading-10 tracking-wide">
-                  <p className="text-base">NFC ID: {}</p>
-                  <p className="text-base">NIK: </p>
-                </div> */}
+                <form onSubmit={handleSubmit}>
+                  <ModalEditProfile isVisible={modal} onClose={() => setModal(false)}>
+                    <div className="grid gap-6 md:grid-cols-2 mb-4">
+                      <div>
+                        <label htmlFor="nama" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Nama
+                        </label>
+                        <input
+                          type="text"
+                          id="nama"
+                          onChange={(e) => setNewNama(e.target.value)}
+                          value={newNama}
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Nama"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="NIK" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          NIK
+                        </label>
+                        <input
+                          type="number"
+                          id="NIK"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="NIK"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="TTL" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          TTL
+                        </label>
+                        <input
+                          type="date"
+                          id="TTL"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="TTL"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="jeniskelamin" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Jenis Kelamin
+                        </label>
+                        <input
+                          type="text"
+                          id="jeniskelamin"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Jenis Kelamin"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="alamat" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Alamat
+                        </label>
+                        <input
+                          type="text"
+                          id="alamat"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Alamat"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="RT" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          RT
+                        </label>
+                        <input
+                          type="number"
+                          id="RT"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="RT"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="RW" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          RW
+                        </label>
+                        <input
+                          type="number"
+                          id="RW"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="RW"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="kelurahandesa" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Kelurahan/Desa
+                        </label>
+                        <input
+                          type="text"
+                          id="kelurahandesa"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Kelurahan/Desa"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="kecamatan" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Kecamatan
+                        </label>
+                        <input
+                          type="text"
+                          id="kecamatan"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Kecamatan"
+                          required
+                        />
+                      </div>
+                      <div>
+                        <label htmlFor="agama" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Agama
+                        </label>
+                        <input
+                          type="text"
+                          id="agama"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="agama"
+                          required
+                        />
+                      </div>
+                      <div className="">
+                        <label htmlFor="pekerjaan" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Pekerjaan
+                        </label>
+                        <input
+                          type="text"
+                          id="pekerjaan"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Pekerjaan"
+                          required
+                        />
+                      </div>
+                      <div className="">
+                        <label htmlFor="kewarganegaraan" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                          Kewarganegaraan
+                        </label>
+                        <input
+                          type="text"
+                          id="kewarganegaraan"
+                          className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                          placeholder="Kewarganegaraan"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className=" flex justify-end">
+                      {!isMutating ? (
+                        <button type="button" className="text-white  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-sky-600 hover:bg-sky-700 focus:ring-sky-800">
+                          Edit Profile
+                        </button>
+                      ) : (
+                        <button type="button" className="text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-sky-600 hover:bg-sky-700 focus:ring-sky-800 btn loading">
+                          Updating...
+                        </button>
+                      )}
+                    </div>
+                  </ModalEditProfile>
+                </form>
+                {/* modal */}
               </div>
             </div>
             <div className="w-[1304px] h-10 pt-4 left-[35px] top-[763px] absolute justify-start items-center gap-3 inline-flex">
