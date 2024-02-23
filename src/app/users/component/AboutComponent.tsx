@@ -48,18 +48,15 @@ export default function AboutComponent() {
           </div>
           <div className="font-medium">
             <p className="text-left flex justify-end mr-20 ml-80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, eligendi accusamus impedit, sunt excepturi tenetur odio cum et quos iste quaerat sequi molestiae aspernatur, nostrum laborum. Saepe minus mollitia magni tenetur
-              necessitatibus excepturi ipsum reprehenderit beatae nesciunt quod inventore odit repellendus eum ut ipsa, placeat odio animi fugiat veniam? Iste, quis culpa fugit vitae natus quod aspernatur, dolorum fuga eaque eos aperiam rem
-              et saepe modi perferendis. Blanditiis nesciunt rem qui, tempore, sapiente corrupti nulla vero amet reprehenderit dolor molestias.
+            Selamat datang di website resmi Grup NFN! Kami adalah tim LansiCare yang terdiri dari empat individu berbakat dengan anggota yang terdiri dari Rakha, sebagai ketua kami, memimpin dengan visi yang kuat serta mengarahkan tim untuk terus berkembang. Ada pula hacker handal kami yaitu Naufal, membawa keahlian teknis yang mendalam serta bertanggung jawab atas program yang ada. Serta ada Raisya, hustler kami, memiki keterampilan komunikasi dan negosiasi yang luar biasa, dan ada pula Keefa, hipster kreatif, menambahkan sentuhan estetika yang unik, sehingga membawa kesan megah kepada tim kami. 
             </p>
             <br />
             <p className="text-left flex justify-end mr-20 ml-80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus esse ipsam animi, necessitatibus voluptates aut? Nobis beatae exercitationem recusandae porro reiciendis veniam ab facilis libero error explicabo molestiae
-              aliquam ea nulla maiores, deleniti expedita? Suscipit accusantium quidem ab repellendus pariatur molestias reprehenderit aliquid odio totam in, officiis ex quaerat sit?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, ipsum!
             </p>
             <br />
             <p className="text-left flex justify-end mr-20 ml-80">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit quis officia aliquam, molestiae tenetur vel est quos alias, velit eius magni voluptatem debitis labore, autem nobis quae ea nulla voluptas?
+            Kami bersatu untuk menciptakan solusi luar biasa dan menghadirkan ide-ide kreatif. Terima kasih telah berkunjung ke situs kami.
             </p>
           </div>
         </div>
