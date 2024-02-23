@@ -125,11 +125,11 @@ export default function Profile({
   };
 
   return (
-    <section>
+    <section className="text-base-100">
       <div className="flex flex-1 flex-col max-w-full justify-center lg:px-8 align-middle h-full mt-20 font-inter bg-base-50">
         <div className="w-[1430px] h-[1149px] py-[17px] mx-auto justify-center place-items-center items-center inline-flex">
           <div className="w-[1417px] h-[1085px] relative">
-            <div className="w-[1370px] h-[711.72px] left-0 top-[0.98px] absolute bg-slate-50 rounded-[10px] shadow">
+            <div className="w-[1370px] h-[711.72px] left-0 top-[0.98px] absolute bg-primary-1000 rounded-[10px] shadow">
               <div className="w-[1370px] h-[336px] left-0 top-0 absolute bg-gradient-to-r from-blue-200 to-cyan-700 rounded-tl-[10px] rounded-tr-[10px]" />
               <div className="w-[1370px] h-[41.73px] pr-3 pt-4 left-[47.48px] top-[37.05px] absolute justify-start items-center gap-[23px] inline-flex">
                 <div className="grow shrink basis-0 flex-col justify-start items-start inline-flex">

@@ -11,11 +11,12 @@ export default function AboutPage() {
 
   return (
     <>
-      <div className=" w-screen h-screen ">
+      <div>
         {!session ? <NavBar /> : <InBar />}
 
         <AboutComponent />
       </div>
+      </section>
     </>
   );
 }
