@@ -16,7 +16,6 @@ export default function AboutPage() {
 
         <AboutComponent />
       </div>
-      </section>
     </>
   );
 }
