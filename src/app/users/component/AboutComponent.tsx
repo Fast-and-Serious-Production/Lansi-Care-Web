@@ -7,6 +7,7 @@ import Image from "next/image";
 export default function AboutComponent() {
   return (
     <>
+    <section>
       <div className="mt-40 mx-auto">
         <h6 className="text-center m-1 text-xl">About us</h6>
         <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
@@ -47,20 +48,21 @@ export default function AboutComponent() {
             <h3 className="break-words font-bold text-5xl text-darkBlue ml-5">are we</h3>
           </div>
           <div className="font-medium">
-            <p className="text-left flex justify-end mr-20 ml-80">
-            Selamat datang di website resmi Grup NFN! Kami adalah tim LansiCare yang terdiri dari empat individu berbakat dengan anggota yang terdiri dari Rakha, sebagai ketua kami, memimpin dengan visi yang kuat serta mengarahkan tim untuk terus berkembang. Ada pula hacker handal kami yaitu Naufal, membawa keahlian teknis yang mendalam serta bertanggung jawab atas program yang ada. Serta ada Raisya, hustler kami, memiki keterampilan komunikasi dan negosiasi yang luar biasa, dan ada pula Keefa, hipster kreatif, menambahkan sentuhan estetika yang unik, sehingga membawa kesan megah kepada tim kami. 
+            <p className="text-left flex justify-normal mr-20 ml-80">
+            Selamat datang di website resmi LansiCare! Kami adalah tim Lorem yang terdiri dari empat individu berbakat yang terdiri dari Rakha, sebagai ketua kami, memimpin dengan visi yang kuat serta mengarahkan tim untuk terus berkembang. Ada pula hacker kami yaitu Naufal, membawa keahlian teknis yang mendalam serta bertanggung jawab atas program yang ada. Serta ada Raisya, hustler kami, memiki keterampilan komunikasi dan negosiasi yang luar biasa, dan ada pula Keefa, hipster kreatif, menambahkan sentuhan estetika yang unik, sehingga membawa kesan megah kepada tim kami. 
             </p>
             <br />
-            <p className="text-left flex justify-end mr-20 ml-80">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, ipsum!
+            <p className="text-left flex justify-normal mr-20 ml-80">
+            Kami menyediakan platform untuk memudahkan lansia dalam menjalani check-up kesehatan. Website ini dirancang untuk memberikan bantuan dengan melakukan registrasi check-up secara online sehingga mereka tidak perlu mengantre di tempat. Selain itu, kami juga menyediakan fitur dimana lansia bisa mengecek riwayat kesehatan sehingga mempermudah mereka untuk mengakses informasi kesehatan. Dengan adanya website ini, kami berharap bisa memberikan alternatif atas permasalahan yang ada, sehingga website kami memiliki manfaat bagi lingkungan sekitar.
             </p>
             <br />
-            <p className="text-left flex justify-end mr-20 ml-80">
+            <p className="text-left flex justify-normal mr-20 ml-80">
             Kami bersatu untuk menciptakan solusi luar biasa dan menghadirkan ide-ide kreatif. Terima kasih telah berkunjung ke situs kami.
             </p>
           </div>
         </div>
       </div>
+      </section>
     </>
   );
 }
