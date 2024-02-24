@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import TrackingKesehatan from "@/public/track-kesehatan-contoh.jpg";
 import ResepObat from "@/public/obat-contoh.jpg";
 import Carousel from "./Carousel";
+import Forms from "./Forms";
 
 export default function Homepage() {
   return (
@@ -118,61 +119,7 @@ export default function Homepage() {
                 Komentar
               </div>
             </div>
-            <form name="form-komentar">
-              <div className="my-8 max-w-3xl px-12">
-                <div className="mb-4">
-                  <label
-                    htmlFor="nama"
-                    className="mb-2 block text-sm font-semibold text-gray-900 dark:text-white"
-                  >
-                    Nama{" "}
-                  </label>
-                  <input
-                    type="text"
-                    id="nama"
-                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-mainBlue focus:ring-mainBlue dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    placeholder="Masukkan Nama"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block text-sm font-semibold text-gray-900 dark:text-white"
-                  >
-                    Email{" "}
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-mainBlue focus:ring-mainBlue dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    placeholder="Masukkan Email"
-                    required
-                  />
-                </div>
-                <div className="mb-4">
-                  <label
-                    htmlFor="Komentar"
-                    className="mb-2 block text-sm font-semibold text-gray-900 dark:text-white"
-                  >
-                    Komentar{" "}
-                  </label>
-                  <textarea
-                    id="Komentar"
-                    name="komentar"
-                    className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-mainBlue focus:ring-mainBlue dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
-                    placeholder="Komentar Anda"
-                    required
-                  />
-                </div>
-                <button
-                  type="button"
-                  className="mb-2 me-2 rounded-lg bg-darkBlue px-5 py-2.5 text-sm font-medium text-white hover:bg-mainBlue focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+            <Forms />
           </div>
         </div>
       </section>

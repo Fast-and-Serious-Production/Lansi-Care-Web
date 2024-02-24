@@ -8,52 +8,110 @@ import Image from "next/image";
 export default function InBar() {
   return (
     <>
-      <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <Image src={LansicareLogo} width={150} height={40} alt="Lansicare Logo Logo" />
+      <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-sky-100 dark:border-gray-600 dark:bg-gray-900">
+        <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
+          <a
+            href="#"
+            className="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <Image
+              src={LansicareLogo}
+              width={150}
+              height={40}
+              alt="Lansicare Logo Logo"
+            />
             {/* <span className="self-center text-base-100 text-[24px] font-medium whitespace-nowrap dark:text-white">LansiCare</span> */}
           </a>
           {/* {!isLoggedIn ? ( */}
-          <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <button className="block p-2 rounded-lg group" type="button" onClick={() => signOut()}>
-              <svg className="flex-shrink-0 w-5 h-5 mx-auto transition duration-75 text-base-100 group-hover: group-hover:text-red-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+          <div className="flex space-x-3 md:order-2 md:space-x-0 rtl:space-x-reverse">
+            <button
+              className="group block rounded-lg p-2"
+              type="button"
+              onClick={() => signOut()}
+            >
+              <svg
+                className="group-hover: mx-auto h-5 w-5 flex-shrink-0 text-base-100 transition duration-75 group-hover:text-red-600"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 18 16"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3"
+                />
               </svg>
-              <span className="flex-1 ms-3 text-base-100 text-center text-[12px] font-semibold group-hover:text-red-600">Logout</span>
+              <span className="ms-3 flex-1 text-center text-[12px] font-semibold text-base-100 group-hover:text-red-600">
+                Logout
+              </span>
             </button>
           </div>
 
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 md:hidden"
             aria-controls="navbar-sticky"
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            <svg
+              className="h-5 w-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
             </svg>
           </button>
-          <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <div
+            className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
+            id="navbar-sticky"
+          >
+            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-sky-100 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-sky-100 md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
               <li>
-                <Link href={"/users/homepage"} className="block py-2 px-3  group">
-                  <svg width="18" className=" block mx-auto" height="19" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Link
+                  href={"/users/homepage"}
+                  className="group block px-3  py-2"
+                >
+                  <svg
+                    width="18"
+                    className=" mx-auto block"
+                    height="19"
+                    viewBox="0 0 15 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M0.738785 12.4677V7.38947C0.738785 6.54831 1.145 5.75893 1.82947 5.27001L6.49319 1.93864C6.946 1.61519 7.55429 1.61518 8.00711 1.93861L12.6713 5.27001C13.3558 5.75893 13.762 6.54834 13.762 7.38953V12.4677C13.762 13.5466 12.8874 14.4212 11.8086 14.4212H9.94781C9.22856 14.4212 8.64549 13.8381 8.64549 13.1189V12.1421C8.64549 11.6027 8.20819 11.1654 7.66875 11.1654H6.83154C6.2921 11.1654 5.85479 11.6027 5.85479 12.1421V13.1189C5.85479 13.8381 5.27172 14.4212 4.55247 14.4212H2.69227C1.61339 14.4212 0.738785 13.5466 0.738785 12.4677Z"
                       className=" fill-black group-hover:fill-Navbar-Hover"
                     />
                   </svg>
-                  <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <p className="rounded text-[12px] text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:dark:hover:bg-transparent group-hover:md:dark:text-Navbar-Hover">
                     Home
                   </p>
                 </Link>
               </li>
               <li>
-                <Link href={"/users/about"} className="block py-2 px-3 group">
-                  <svg width="18" className=" block mx-auto" height="19" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Link href={"/users/about"} className="group block px-3 py-2">
+                  <svg
+                    width="18"
+                    className=" mx-auto block"
+                    height="19"
+                    viewBox="0 0 15 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       fill-rule="evenodd"
                       clip-rule="evenodd"
@@ -73,14 +131,21 @@ export default function InBar() {
                       className=" fill-black group-hover:fill-Navbar-Hover"
                     />
                   </svg>
-                  <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <p className="rounded text-[12px] text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:dark:hover:bg-transparent group-hover:md:dark:text-Navbar-Hover">
                     About
                   </p>
                 </Link>
               </li>
               <li>
-                <Link href={"/users/profile"} className="block py-2 px-3 group">
-                  <svg width="18" className=" block mx-auto" height="19" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <Link href={"/users/profile"} className="group block px-3 py-2">
+                  <svg
+                    width="18"
+                    className=" mx-auto block"
+                    height="19"
+                    viewBox="0 0 15 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <g filter="url(#filter0_d_627_1060)">
                       <path
                         fill-rule="evenodd"
@@ -96,19 +161,47 @@ export default function InBar() {
                       />
                     </g>
                     <defs>
-                      <filter id="filter0_d_627_1060" x="-3.24958" y="0" width="22" height="22.3987" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                      <filter
+                        id="filter0_d_627_1060"
+                        x="-3.24958"
+                        y="0"
+                        width="22"
+                        height="22.3987"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
                         <feOffset dy="4" />
                         <feGaussianBlur stdDeviation="2" />
                         <feComposite in2="hardAlpha" operator="out" />
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_627_1060" />
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_627_1060" result="shape" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_627_1060"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_627_1060"
+                          result="shape"
+                        />
                       </filter>
                     </defs>
                   </svg>
-                  <p className="text-gray-900 text-[12px] rounded hover:bg-gray-100 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:p-0 group-hover:md:dark:text-Navbar-Hover dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                  <p className="rounded text-[12px] text-gray-900 hover:bg-gray-100 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:p-0 md:hover:bg-transparent group-hover:md:text-Navbar-Hover md:dark:hover:bg-transparent group-hover:md:dark:text-Navbar-Hover">
                     Profile
                   </p>
                 </Link>
