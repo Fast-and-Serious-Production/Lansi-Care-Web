@@ -5,6 +5,7 @@ import NavBar from "../component/NavBar";
 import { useSession } from "next-auth/react";
 import InBar from "../component/InBar";
 import { redirect } from "next/navigation";
+import Footer from "../component/Footer";
 
 export default function SigninPage() {
   const { data: session } = useSession();
@@ -14,6 +15,8 @@ export default function SigninPage() {
       {!session ? <NavBar /> : <InBar />}
 
       <SigninUser />
+      <Footer/>
+
     </div>
   );
 }

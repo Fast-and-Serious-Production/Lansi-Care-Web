@@ -9,6 +9,7 @@ import Image from "next/image";
 import ModalEditProfile from "../component/ModalEditProfile";
 import { useRouter } from "next/navigation";
 import gammbarAsma from "@/public/gambar_Asma.jpg";
+import Footer from "../component/Footer";
 
 interface PatientData {
   _id: number;
@@ -142,7 +143,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      {/* {!session ? (
+      {!session ? (
         <>
           {!session ? <NavBar /> : <InBar />}
 
@@ -159,7 +160,7 @@ export default function ProfilePage() {
             </div>
           </div>
         </>
-      ) : ( */}
+      ) : (
       <section>
         <div className="w-screen scroll-smooth bg-base-50">
           {!session ? <NavBar /> : <InBar />}
@@ -662,8 +663,10 @@ export default function ProfilePage() {
             </div>
           </>
         </div>
+        <Footer/>
+
         </section>
-      {/* )} */}
+       )} 
     </>
   );
 }
