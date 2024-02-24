@@ -58,20 +58,17 @@ export default function Carousel() {
             <main className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply">
               <div className="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56">
                 <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-                  Apalah ini judul{" "}
+                  Welcome User{" "}
                 </h1>
                 <p className="mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Repudiandae distinctio cum aliquam soluta iusto, facilis
-                  corporis eveniet culpa neque facere, perferendis ut aspernatur
-                  molestias ea dolorum id quae incidunt quod.
+                Selamat datang, user! Website ini dirancang khusus untuk membantu Anda dalam melakukan registrasi check-up kesehatan, dan juga website ini bisa membantu Anda melihat riwayat check-up kesehatan. Dapatkan akses informasi kesehatan Anda dengan mudah dan cepat. Kami berkomitmen untuk menyediakan layanan yang dapat meningkatkan kesehatan dan kesejahteraan lansia. Jangan ragu untuk mulai registrasi dan jadwalkan check-up Anda sekarang!
                 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                    className="inline-flex items-center justify-center rounded-lg bg-darkBlue px-5 py-3 text-center text-base font-medium text-white hover:bg-mainBlue focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                   >
-                    Get started
+                    Explore more
                     <svg
                       className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
                       aria-hidden="true"
@@ -87,12 +84,6 @@ export default function Carousel() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 text-center text-base font-medium text-white hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-400 sm:ms-4"
-                  >
-                    Learn more
                   </a>
                 </div>
               </div>
@@ -117,9 +108,9 @@ export default function Carousel() {
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                    className="inline-flex items-center justify-center rounded-lg bg-darkBlue px-5 py-3 text-center text-base font-medium text-white hover:bg-mainBlue focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                   >
-                    Get started
+                    Explore more
                     <svg
                       className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
                       aria-hidden="true"
@@ -135,12 +126,6 @@ export default function Carousel() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 text-center text-base font-medium text-white hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-400 sm:ms-4"
-                  >
-                    Learn more
                   </a>
                 </div>
               </div>
@@ -165,9 +150,9 @@ export default function Carousel() {
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                   <a
                     href="#"
-                    className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+                    className="inline-flex items-center justify-center rounded-lg bg-darkBlue px-5 py-3 text-center text-base font-medium text-white hover:bg-mainBlue focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                   >
-                    Get started
+                    Explore more
                     <svg
                       className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
                       aria-hidden="true"
@@ -183,12 +168,6 @@ export default function Carousel() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center rounded-lg border border-white px-5 py-3 text-center text-base font-medium text-white hover:bg-gray-100 hover:text-gray-900 focus:ring-4 focus:ring-gray-400 sm:ms-4"
-                  >
-                    Learn more
                   </a>
                 </div>
               </div>

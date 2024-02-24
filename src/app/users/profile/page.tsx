@@ -142,7 +142,7 @@ export default function ProfilePage() {
 
   return (
     <>
-      {!session ? (
+      {/* {!session ? (
         <>
           {!session ? <NavBar /> : <InBar />}
 
@@ -159,11 +159,11 @@ export default function ProfilePage() {
             </div>
           </div>
         </>
-      ) : (
+      ) : ( */}
         <div className="h-screen w-screen scroll-smooth bg-base-50">
           {!session ? <NavBar /> : <InBar />}
           <>
-            <div className="mt-20 h-full">
+            <div className="pt-40 h-full">
               <div className="flex max-w-full flex-1 flex-col justify-center align-middle font-inter lg:px-8">
                 <div className="mx-auto inline-flex h-auto w-[1430px] place-items-center items-center justify-center py-[17px]">
                   <div className="relative h-auto w-[1417px]">
@@ -628,11 +628,12 @@ export default function ProfilePage() {
                       </div>
                       {/* content */}
                     </div>
+                    
                     <div className="mt-20 w-[1430px] max-w-full rounded-md border bg-slate-50 shadow-sm">
                       <h3 className=" px-12 py-6 font-inter text-2xl font-medium text-black">
                         Riwayat Penyakit
                       </h3>
-                      <div className="mt-6 px-12">
+                      <div className="mt-4 px-12">
                         <div className=" max-w-60 rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
                           <a href="#">
                             <Image
@@ -651,7 +652,8 @@ export default function ProfilePage() {
                               <p>Senin, 19 January 2001 12:00:35</p>
                             </a>
                           </div>
-                        </div>
+                          </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -660,7 +662,7 @@ export default function ProfilePage() {
             </div>
           </>
         </div>
-      )}
+      {/* )} */}
     </>
   );
 }
