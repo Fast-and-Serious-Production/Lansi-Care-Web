@@ -60,7 +60,7 @@ export default function Footer() {
                           <a href="https://github.com/Fast-and-Serious-Production" target='_blank' className="hover:underline ">Github</a>
                       </li>
                       <li>
-                          <a href="#" target='_blank' className="hover:underline">Instagram</a>
+                          <a href="https://www.instagram.com/innosync_" target='_blank' className="hover:underline">Instagram</a>
                       </li>
                   </ul>
               </div>
