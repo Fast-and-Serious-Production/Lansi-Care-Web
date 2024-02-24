@@ -1,3 +1,4 @@
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const ScriptURL =
@@ -7,15 +8,21 @@ const Forms: React.FC = () => {
   const [nama, setNama] = useState("");
   const [email, setEmail] = useState("");
   const [komentar, setKomentar] = useState("");
+  const [isMutating, setIsMutating] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setIsMutating(true);
     try {
       const response = await fetch(ScriptURL, {
         method: "POST",
         body: new FormData(e.currentTarget),
       });
       console.log("Success!", response);
+      router.refresh();
+      window.location.reload();
+      alert("Komentar anda berhasil terkirim!");
     } catch (error) {
       console.error("Error!", (error as Error).message);
     }
@@ -77,12 +84,21 @@ const Forms: React.FC = () => {
             required
           />
         </div>
-        <button
-          type="submit"
-          className="mb-2 me-2 rounded-lg bg-darkBlue px-5 py-2.5 text-sm font-medium text-white hover:bg-mainBlue focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Submit
-        </button>
+        {!isMutating ? (
+          <button
+            type="submit"
+            className="mb-2 me-2 rounded-lg bg-darkBlue px-5 py-2.5 text-sm font-medium text-white hover:bg-mainBlue focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Submit
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="mb-2 me-2 rounded-lg bg-mainBlue px-5 py-2.5 text-sm font-medium text-white hover:bg-mainBlue focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Loading . . .
+          </button>
+        )}
       </div>
     </form>
   );
