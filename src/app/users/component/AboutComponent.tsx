@@ -8,9 +8,9 @@ export default function AboutComponent() {
   return (
     <>
     <section>
-      <div className="mt-40 mx-auto">
+      <div className="mt-40 mx-auto text-base-100">
         <h6 className="text-center m-1 text-xl">About us</h6>
-        <h1 className="mb-20 mt-10 text-center font-bold text-5xl mx-80">Lorem ipsum dolor sit amet, consectetur adipisicing.</h1>
+        <h1 className="mb-20 mt-10 text-center font-bold text-6xl mx-80">InnoSync</h1>
       </div>
 
       <div className="relative mb-20 mt-[400px] w-full h-10 grid grid-cols-4">

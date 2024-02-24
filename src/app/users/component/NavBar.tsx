@@ -9,7 +9,7 @@ import { signOut, useSession } from "next-auth/react";
 export default function NavBar() {
   return (
     <>
-      <nav className=" border-gray-200- fixed start-0 top-0 z-20 w-full border-b bg-sky-100 dark:border-gray-600 dark:bg-gray-900">
+      <nav className=" border-gray-200- fixed start-0 top-0 z-20 w-full border-b bg-primary-1000 dark:border-gray-600 dark:bg-gray-900 shadow-md">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
           <a
             href="#"
@@ -130,7 +130,7 @@ export default function NavBar() {
             className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
             id="navbar-sticky"
           >
-            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-sky-100 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-sky-100 md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
+            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-primary-1000 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-primary-1000 md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
               <li>
                 <Link
                   href={"/users/homepage"}

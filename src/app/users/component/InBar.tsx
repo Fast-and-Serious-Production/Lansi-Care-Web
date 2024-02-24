@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function InBar() {
   return (
     <>
-      <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-sky-100 dark:border-gray-600 dark:bg-gray-900">
+      <nav className="fixed start-0 top-0 z-20 w-full border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-900 shadow-md">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
           <a
             href="#"
@@ -78,7 +78,7 @@ export default function InBar() {
             className="hidden w-full items-center justify-between md:order-1 md:flex md:w-auto"
             id="navbar-sticky"
           >
-            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-sky-100 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-sky-100 md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
+            <ul className="mt-4 flex flex-col rounded-lg border border-gray-100 bg-primary-1000 p-4 font-medium dark:border-gray-700 dark:bg-gray-800 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-primary-1000 md:p-0 md:dark:bg-gray-900 rtl:space-x-reverse">
               <li>
                 <Link
                   href={"/users/homepage"}
