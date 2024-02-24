@@ -3,7 +3,6 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import TrackingKesehatan from "@/public/track-kesehatan-contoh.jpg";
-import ResepObat from "@/public/obat-contoh.jpg";
 import Carousel from "./Carousel";
 import Forms from "./Forms";
 
