@@ -2,8 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect } from "react";
-
-export default function Carousel() {
+import hospitals from "@/public/rumahsakits.jpeg";
+import lansia from "@/public/lansia.jpg";
+import checkUp from "@/public/pexels-pixabay-40568.jpg";
+interface BackgroundImageProps {
+  imageURL: string;
+}
+export default function Carousel({ imageURL }: any) {
   useEffect(() => {
     const init = async () => {
       const { Carousel, initTE } = await import("tw-elements");
@@ -58,8 +63,13 @@ export default function Carousel() {
           >
             <main
               id="carousel1"
-              className="flex bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply"
+              className="flex bg-gray-900/90  bg-center bg-no-repeat bg-blend-multiply"
             >
+              <Image
+                src={hospitals}
+                className="absolute -z-20 w-screen bg-center bg-no-repeat bg-blend-multiply"
+                alt="background Image"
+              />
               <div className=" max-w-screen-xl px-4 py-24 text-start lg:py-56">
                 <h1 className="mb-4 pl-48 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                   Welcome User{" "}
@@ -108,9 +118,14 @@ export default function Carousel() {
           >
             <main
               id="carousel2"
-              className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat pl-52 bg-blend-multiply"
+              className="z-50  w-screen bg-gray-900/90 bg-center bg-no-repeat bg-blend-multiply "
             >
-              <div className=" max-w-screen-xl px-4 py-24 text-end lg:py-56">
+              <Image
+                src={lansia}
+                className=" absolute -z-20 w-screen bg-center bg-no-repeat object-right-top bg-blend-multiply"
+                alt="background Image"
+              />
+              <div className=" ml-40 max-w-screen-xl px-4 py-24 text-end lg:py-56">
                 <h1 className="mb-4 mt-7 pl-48 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                   LansiCare{" "}
                 </h1>
@@ -158,10 +173,18 @@ export default function Carousel() {
           >
             <main
               id="carousel3"
-              className=" bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply"
+              className="z-50 w-screen bg-gray-900/90 bg-center bg-no-repeat bg-blend-multiply "
             >
-              <div className="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56">
-                <h1 className=" mb-36 mt-16 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
+              <Image
+                src={checkUp}
+                className="absolute -z-20 w-screen bg-center bg-no-repeat bg-blend-multiply"
+                alt="background Image"
+              />
+              <div
+                className=" mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56"
+                // style={{ backgroundImage: `url('${imageURL}')` }}
+              >
+                <h1 className=" mb-36 mt-16 text-4xl font-extrabold leading-none tracking-tight text-slate-200 md:text-5xl lg:text-6xl">
                   Ayo jadwalkan chek-up kesehatan Anda sekarang juga!
                 </h1>
 

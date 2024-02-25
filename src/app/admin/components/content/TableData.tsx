@@ -6,6 +6,7 @@ import AddDataIcons from "@/public/AddDataIcons.svg";
 import Image from "next/image";
 // Import InputSearch if it's available
 import InputSearch from "../utilities/InputSearch";
+import CopyClipboard from "../utilities/CopyClipboard";
 
 enum PasienStatus {
   Registered = "Registered",
@@ -74,65 +75,98 @@ export default function TableData() {
 
   useEffect(() => {
     // Filter patients based on searchInput
-    const filtered = patients.filter((patient) => patient.nfcId?.toString().includes(searchInput) || patient.nama?.toString().includes(searchInput));
+    const filtered = patients.filter(
+      (patient) =>
+        patient.nfcId?.toString().includes(searchInput) ||
+        patient.nama?.toString().includes(searchInput),
+    );
     setFilteredPatients(filtered);
   }, [searchInput, patients]);
 
   const handleSearchInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchInput(e.target.value);
   };
-
+  const textCopy = "https://lansicare-health.vercel.app/users/profile";
   return (
     <>
-      <section className="container max-w-7xl w-full mx-10 mt-7 block">
+      <section className="container mx-10 mt-7 block w-full max-w-7xl">
         <div className="max-w-2xl">
           {/* Pass the search input state and change handler to InputSearch */}
-          <InputSearch searchInput={searchInput} handleSearchInputChange={handleSearchInputChange} />
+          <InputSearch
+            searchInput={searchInput}
+            handleSearchInputChange={handleSearchInputChange}
+          />
+        </div>
+        <div className="mt-10 flex justify-end">
+          <div className="flex justify-end rounded-md border-2 border-mainBlue bg-sky-200 px-3 py-3 hover:ring-2 hover:ring-blue-200">
+            <p className=" mr-14 text-xs font-medium">{textCopy}</p>
+            <CopyClipboard text={textCopy} />
+          </div>
         </div>
         <div>
-          <Link href={"/admin/dashboard/addPasien"} className="text-white flex bg-mainBlue hover:bg-sky-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2.5 me-2 mb-2 focus:outline-none absolute right-28 top-36">
+          <Link
+            href={"/admin/dashboard/addPasien"}
+            className="absolute right-28 top-36 mb-2 me-2 flex rounded-lg bg-mainBlue px-3 py-2.5 text-sm font-medium text-white hover:bg-sky-400 focus:outline-none focus:ring-4 focus:ring-blue-300"
+          >
             <p className="mr-2">Add</p>
             <Image src={AddDataIcons} alt="Add Icons" width={20} />
           </Link>
         </div>
-        <div className="max-w-7xl mt-8 mb-8">
+        <div className="mb-8 mt-8 max-w-7xl">
           <div className="relative overflow-x-auto">
-            <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-              <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr className=" bg-mainBlue text-center text-white border-4 border-white">
-                  <th scope="col" className="px-6 py-3 border-4 border-white">
+            <table className="w-full text-left text-sm text-gray-500 dark:text-gray-400 rtl:text-right">
+              <thead className="bg-gray-50 text-xs uppercase text-gray-700 dark:bg-gray-700 dark:text-gray-400">
+                <tr className=" border-4 border-white bg-mainBlue text-center text-white">
+                  <th scope="col" className="border-4 border-white px-6 py-3">
                     No
                   </th>
-                  <th scope="col" className="px-6 py-3 border-4 border-white">
+                  <th scope="col" className="border-4 border-white px-6 py-3">
                     User ID
                   </th>
-                  <th scope="col" className="px-6 py-3 border-4 border-white">
+                  <th scope="col" className="border-4 border-white px-6 py-3">
                     Name
                   </th>
-                  <th scope="col" className="px-6 py-3 border-4 border-white">
+                  <th scope="col" className="border-4 border-white px-6 py-3">
                     Status
                   </th>
-                  <th scope="col" className="px-6 py-3 border-4 border-white">
+                  <th scope="col" className="border-4 border-white px-6 py-3">
                     Terakhir Diubah
                   </th>
-                  <th scope="col" className="px-6 py-3 border-4 border-white">
+                  <th scope="col" className="border-4 border-white px-6 py-3">
                     Action
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {filteredPatients.map((Data, index) => (
-                  <tr key={Data._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                    <td scope="row" className="px-6 py-3 font-medium text-gray-900 text-xs dark:text-white text-center border-4 border-white bg-sky-200">
+                  <tr
+                    key={Data._id}
+                    className="border-b bg-white dark:border-gray-700 dark:bg-gray-800"
+                  >
+                    <td
+                      scope="row"
+                      className="border-4 border-white bg-sky-200 px-6 py-3 text-center text-xs font-medium text-gray-900 dark:text-white"
+                    >
                       {index + 1}
                     </td>
-                    <td className="px-6 py-3 border-4 border-white bg-sky-200 text-xs">{Data.nfcId}</td>
-                    <td className="px-6 py-3 border-4 border-white bg-sky-200 font-semibold text-xs">{Data.nama}</td>
-                    <td className="px-6 py-3 border-4 border-white bg-sky-200 text-center text-xs">{Data.pasienStatus}</td>
-                    <td className="px-6 py-3 border-4 border-white bg-sky-200 text-center text-xs">{Data.updatedAt}</td>
+                    <td className="border-4 border-white bg-sky-200 px-6 py-3 text-xs">
+                      {Data.nfcId}
+                    </td>
+                    <td className="border-4 border-white bg-sky-200 px-6 py-3 text-xs font-semibold">
+                      {Data.nama}
+                    </td>
+                    <td className="border-4 border-white bg-sky-200 px-6 py-3 text-center text-xs">
+                      {Data.pasienStatus}
+                    </td>
+                    <td className="border-4 border-white bg-sky-200 px-6 py-3 text-center text-xs">
+                      {Data.updatedAt}
+                    </td>
 
-                    <td className="px-6 py-3 border-white flex-1 border-4 bg-sky-200 justify-center">
-                      <Link href={`/admin/dashboard/editPasien/${Data._id}`} className="text-white bg-green-400 hover:bg-green-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none ">
+                    <td className="flex-1 justify-center border-4 border-white bg-sky-200 px-6 py-3">
+                      <Link
+                        href={`/admin/dashboard/editPasien/${Data._id}`}
+                        className="mb-2 me-2 rounded-lg bg-green-400 px-5 py-2.5 text-sm font-medium text-white hover:bg-green-500 focus:outline-none focus:ring-4 focus:ring-blue-300 "
+                      >
                         Edit & View
                       </Link>
                       <RemovePatient _id={Data._id} />

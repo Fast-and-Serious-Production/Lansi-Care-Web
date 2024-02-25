@@ -36,71 +36,71 @@ export default function Homepage() {
               </div> */}
 
               <div className="mx-10 mt-5 grid grid-cols-2 content-center gap-4">
-                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
-                  <a href="#">
+                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow transition-all hover:scale-95 hover:ring-4 hover:ring-mainBlue/20 dark:border-gray-700 dark:bg-gray-800">
+                  <div>
                     <Image
                       className="rounded-t-lg"
                       src={TrackingKesehatan}
                       alt="foto"
                     />
-                  </a>
+                  </div>
                   <div className="p-5">
-                    <a href="#">
+                    <div>
                       <h5 className="mb-2 text-[18px] font-semibold tracking-tight text-base-100 dark:text-white">
                         Track Kesehatan
                       </h5>
-                    </a>
+                    </div>
                     <p className="mb-3 text-[15px] font-normal text-base-100 dark:text-gray-400">
                       Lacak Kesehatanmu Disini
                     </p>
                   </div>
                 </div>
 
-                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
-                  <a href="#">
+                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow transition-all hover:scale-95 hover:ring-4 hover:ring-mainBlue/20 dark:border-gray-700 dark:bg-gray-800">
+                  <div>
                     <Image
                       className="rounded-t-lg"
                       src={ResepObat}
                       width={700}
                       alt="foto"
                     />
-                  </a>
+                  </div>
                   <div className="p-5">
-                    <a href="#">
+                    <div>
                       <h5 className="mb-2 text-[18px] font-semibold tracking-tight text-base-100 dark:text-white">
                         Resep Obat
                       </h5>
-                    </a>
+                    </div>
                     <p className="mb-3 text-[15px] font-normal text-base-100 dark:text-gray-400">
                       Lihat Resep Obatmu Disini
                     </p>
                   </div>
                 </div>
-                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
-                  <a href="#">
+                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow transition-all hover:scale-95 hover:ring-4 hover:ring-mainBlue/20 dark:border-gray-700 dark:bg-gray-800">
+                  <div>
                     <Image className="rounded-t-lg" src={Regist} alt="foto" />
-                  </a>
+                  </div>
                   <div className="p-5">
-                    <a href="#">
+                    <div>
                       <h5 className="mb-2 text-[18px] font-semibold tracking-tight text-base-100 dark:text-white">
                         Registrasi Cepat
                       </h5>
-                    </a>
+                    </div>
                     <p className="mb-3 text-[15px] font-normal text-base-100 dark:text-gray-400">
                       Sekarang registrasi kesehatan tidak perlu ribet
                     </p>
                   </div>
                 </div>
-                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
-                  <a href="#">
+                <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow transition-all hover:scale-95 hover:ring-4 hover:ring-mainBlue/20 dark:border-gray-700 dark:bg-gray-800">
+                  <div>
                     <Image className="rounded-t-lg" src={CheckUp} alt="foto" />
-                  </a>
+                  </div>
                   <div className="p-5">
-                    <a href="#">
+                    <div>
                       <h5 className="mb-2 text-[18px] font-semibold tracking-tight text-base-100 dark:text-white">
                         Check up Kesehatan
                       </h5>
-                    </a>
+                    </div>
                     <p className="mb-3 text-[15px] font-normal text-base-100 dark:text-gray-400">
                       Cek kesehatanmu dengan sekali tap di klinik/rumah sakit
                       terdekat
