@@ -2,7 +2,10 @@
 
 import React, { useEffect } from "react";
 import Image from "next/image";
-import TrackingKesehatan from "@/public/track-kesehatan-contoh.jpg";
+import TrackingKesehatan from "@/public/monitoring-kesehatan.jpeg";
+import ResepObat from "@/public/obat.jpg";
+import CheckUp from "@/public/checkup.jpeg";
+import Regist from "@/public/registrasi.jpg";
 import Carousel from "./Carousel";
 import Forms from "./Forms";
 
@@ -57,7 +60,8 @@ export default function Homepage() {
                   <a href="#">
                     <Image
                       className="rounded-t-lg"
-                      src={TrackingKesehatan}
+                      src={ResepObat}
+                      width={700}
                       alt="foto"
                     />
                   </a>
@@ -74,11 +78,7 @@ export default function Homepage() {
                 </div>
                 <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
                   <a href="#">
-                    <Image
-                      className="rounded-t-lg"
-                      src={TrackingKesehatan}
-                      alt="foto"
-                    />
+                    <Image className="rounded-t-lg" src={Regist} alt="foto" />
                   </a>
                   <div className="p-5">
                     <a href="#">
@@ -93,11 +93,7 @@ export default function Homepage() {
                 </div>
                 <div className="max-h-sm w-fit rounded-lg border border-gray-200 bg-primary-1000 shadow dark:border-gray-700 dark:bg-gray-800">
                   <a href="#">
-                    <Image
-                      className="rounded-t-lg"
-                      src={TrackingKesehatan}
-                      alt="foto"
-                    />
+                    <Image className="rounded-t-lg" src={CheckUp} alt="foto" />
                   </a>
                   <div className="p-5">
                     <a href="#">
