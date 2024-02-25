@@ -108,10 +108,14 @@ export default function Carousel() {
                   Apalah ini judul{" "}
                 </h1>
                 <p className="mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Repudiandae distinctio cum aliquam soluta iusto, facilis
-                  corporis eveniet culpa neque facere, perferendis ut aspernatur
-                  molestias ea dolorum id quae incidunt quod.
+                  Selamat datang, user! Website ini dirancang khusus untuk
+                  membantu Anda dalam melakukan registrasi check-up kesehatan,
+                  dan juga website ini bisa membantu Anda melihat riwayat
+                  check-up kesehatan. Dapatkan akses informasi kesehatan Anda
+                  dengan mudah dan cepat. Kami berkomitmen untuk menyediakan
+                  layanan yang dapat meningkatkan kesehatan dan kesejahteraan
+                  lansia. Jangan ragu untuk mulai registrasi dan jadwalkan
+                  check-up Anda sekarang!
                 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                   <a
@@ -150,10 +154,14 @@ export default function Carousel() {
                   Apalah ini judul{" "}
                 </h1>
                 <p className="mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Repudiandae distinctio cum aliquam soluta iusto, facilis
-                  corporis eveniet culpa neque facere, perferendis ut aspernatur
-                  molestias ea dolorum id quae incidunt quod.
+                  Selamat datang, user! Website ini dirancang khusus untuk
+                  membantu Anda dalam melakukan registrasi check-up kesehatan,
+                  dan juga website ini bisa membantu Anda melihat riwayat
+                  check-up kesehatan. Dapatkan akses informasi kesehatan Anda
+                  dengan mudah dan cepat. Kami berkomitmen untuk menyediakan
+                  layanan yang dapat meningkatkan kesehatan dan kesejahteraan
+                  lansia. Jangan ragu untuk mulai registrasi dan jadwalkan
+                  check-up Anda sekarang!
                 </p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
                   <a
