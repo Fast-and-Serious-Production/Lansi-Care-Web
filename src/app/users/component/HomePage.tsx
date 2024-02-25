@@ -10,11 +10,14 @@ export default function Homepage() {
   return (
     <>
       {/* Home Carousel */}
-      <section className="text-base-100">
+      <section className="scroll-smooth text-base-100">
         <Carousel />
         <div className="mx-auto flex h-full flex-col place-items-center justify-center bg-base-50 pb-[30px] pt-[100px] align-middle font-inter">
           {/* Fitur-fitur */}
-          <div className="mx-[35] mt-[10px] h-auto w-[1366.48px] rounded-[10px] bg-primary-1000 pb-10 shadow-md">
+          <div
+            id="main"
+            className="mx-[35] mt-[10px] h-auto w-[1366.48px] rounded-[10px] bg-primary-1000 pb-10 shadow-md"
+          >
             <div className="mt-[33px] inline-flex h-6 w-96 flex-col items-start justify-start px-10">
               <div className="self-stretch text-2xl font-semibold leading-normal text-neutral-800">
                 Fitur-fitur
@@ -112,7 +115,7 @@ export default function Homepage() {
             </div>
           </div>
           {/* Komentar */}
-          <div className="mx-[35] mt-[30px] mb-[20px] w-[1366.48px] rounded-[10px] bg-primary-1000 shadow-md">
+          <div className="mx-[35] mb-[20px] mt-[30px] w-[1366.48px] rounded-[10px] bg-primary-1000 shadow-md">
             <div className="mt-[33px] inline-flex h-6 w-96 flex-col items-start justify-start px-10">
               <div className="self-stretch text-2xl font-semibold leading-normal text-neutral-800">
                 Komentar

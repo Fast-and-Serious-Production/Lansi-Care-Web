@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect } from "react";
 
 export default function Carousel() {
@@ -55,7 +56,10 @@ export default function Carousel() {
             data-te-carousel-item
             style={{ backfaceVisibility: "hidden" }}
           >
-            <main className="flex bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply">
+            <main
+              id="carousel1"
+              className="flex bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply"
+            >
               <div className=" max-w-screen-xl px-4 py-24 text-start lg:py-56">
                 <h1 className="mb-4 pl-48 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
                   Welcome User{" "}
@@ -71,8 +75,8 @@ export default function Carousel() {
                   check-up Anda sekarang!
                 </p>
                 <div className="ml-48 flex flex-col space-y-4 sm:flex-row sm:justify-start sm:space-y-0">
-                  <a
-                    href="#"
+                  <Link
+                    href={"profile"}
                     className="inline-flex items-center justify-center rounded-lg bg-darkBlue px-5 py-3 text-center text-base font-medium text-white hover:bg-mainBlue focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                   >
                     Explore more
@@ -91,7 +95,7 @@ export default function Carousel() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56"></div>
@@ -102,24 +106,27 @@ export default function Carousel() {
             data-te-carousel-item
             style={{ backfaceVisibility: "hidden" }}
           >
-            <main className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply">
-              <div className="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56">
-                <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-                  Apalah ini judul{" "}
+            <main
+              id="carousel2"
+              className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat pl-52 bg-blend-multiply"
+            >
+              <div className=" max-w-screen-xl px-4 py-24 text-end lg:py-56">
+                <h1 className="mb-4 mt-7 pl-48 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
+                  LansiCare{" "}
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl">
-                  Selamat datang, user! Website ini dirancang khusus untuk
-                  membantu Anda dalam melakukan registrasi check-up kesehatan,
-                  dan juga website ini bisa membantu Anda melihat riwayat
-                  check-up kesehatan. Dapatkan akses informasi kesehatan Anda
-                  dengan mudah dan cepat. Kami berkomitmen untuk menyediakan
-                  layanan yang dapat meningkatkan kesehatan dan kesejahteraan
-                  lansia. Jangan ragu untuk mulai registrasi dan jadwalkan
-                  check-up Anda sekarang!
+                <p className="mb-8 text-end text-lg font-normal text-gray-300 sm:pl-16 lg:pl-64 lg:text-xl">
+                  Website ini membantu Anda dalam melakukan registrasi check-up
+                  secara online. Anda bisa melakukan registrasi check-up dengan
+                  memilih dokter yang sesuai. Selanjutnya akan keluar nomor
+                  antrean dan waktu untuk pemeriksaan. Selain itu, website ini
+                  juga membantu Anda untuk mengecek riwayat pemeriksaan Anda.
+                  Anda tidak perlu lagi mengantre dengan kurun waktu yang lama
+                  di klinik karena bisa mengantre secara online. Tunggu apa
+                  lagi? Jadwalkan check-up kesehatan Anda sekarang juga!
                 </p>
-                <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                  <a
-                    href="#"
+                <div className="ml-48 flex flex-col space-y-4 sm:flex-row sm:justify-end sm:space-y-0">
+                  <Link
+                    href={"profile"}
                     className="inline-flex items-center justify-center rounded-lg bg-darkBlue px-5 py-3 text-center text-base font-medium text-white hover:bg-mainBlue focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                   >
                     Explore more
@@ -138,9 +145,10 @@ export default function Carousel() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
+              {/* <div className="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56"></div> */}
             </main>
           </div>
           <div
@@ -148,23 +156,17 @@ export default function Carousel() {
             data-te-carousel-item
             style={{ backfaceVisibility: "hidden" }}
           >
-            <main className="bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply">
+            <main
+              id="carousel3"
+              className=" bg-gray-700 bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-center bg-no-repeat bg-blend-multiply"
+            >
               <div className="mx-auto max-w-screen-xl px-4 py-24 text-center lg:py-56">
-                <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
-                  Apalah ini judul{" "}
+                <h1 className=" mb-36 mt-16 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">
+                  Ayo jadwalkan chek-up kesehatan Anda sekarang juga!
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-300 sm:px-16 lg:px-48 lg:text-xl">
-                  Selamat datang, user! Website ini dirancang khusus untuk
-                  membantu Anda dalam melakukan registrasi check-up kesehatan,
-                  dan juga website ini bisa membantu Anda melihat riwayat
-                  check-up kesehatan. Dapatkan akses informasi kesehatan Anda
-                  dengan mudah dan cepat. Kami berkomitmen untuk menyediakan
-                  layanan yang dapat meningkatkan kesehatan dan kesejahteraan
-                  lansia. Jangan ragu untuk mulai registrasi dan jadwalkan
-                  check-up Anda sekarang!
-                </p>
+
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                  <a
+                  {/* <a
                     href="#"
                     className="inline-flex items-center justify-center rounded-lg bg-darkBlue px-5 py-3 text-center text-base font-medium text-white hover:bg-mainBlue focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
                   >
@@ -184,7 +186,7 @@ export default function Carousel() {
                         d="M1 5h12m0 0L9 1m4 4L9 9"
                       />
                     </svg>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </main>
