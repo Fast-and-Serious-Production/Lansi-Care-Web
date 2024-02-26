@@ -11,122 +11,12 @@ import { useRouter } from "next/navigation";
 import gammbarAsma from "@/public/gambar_Asma.jpg";
 import Footer from "../component/Footer";
 
-interface PatientData {
-  _id: number;
-  email: string;
-  riwayatPenyakit: string;
-  pasienStatus: string;
-  nama: string;
-  NIK: number;
-  TTL: string;
-  JenisKelamin: string;
-  Alamat: string;
-  RT: number;
-  RW: number;
-  KelurahanDesa: string;
-  Kecamatan: string;
-  Agama: string;
-  StatusPerkawinan: boolean;
-  Pekerjaan: string;
-  Kewarganegaraan: string;
-  BerlakuHingga: Date;
-}
-
-export const Profile = ({
-  _id,
-  email,
-  riwayatPenyakit,
-  pasienStatus,
-  nama,
-  NIK,
-  TTL,
-  JenisKelamin,
-  Alamat,
-  RT,
-  RW,
-  KelurahanDesa,
-  Kecamatan,
-  Agama,
-  Pekerjaan,
-  Kewarganegaraan,
-}: {
-  _id: number;
-  email: string;
-  riwayatPenyakit: string;
-  pasienStatus: string;
-  nama: string;
-  NIK: number;
-  TTL: string;
-  JenisKelamin: string;
-  Alamat: string;
-  RT: number;
-  RW: number;
-  KelurahanDesa: string;
-  Kecamatan: string;
-  Agama: string;
-  Pekerjaan: string;
-  Kewarganegaraan: string;
-}): React.ReactElement => {
-  const [newNama, setNewNama] = useState(nama);
-  const [newTTL, setNewTTL] = useState(TTL);
-  const [newAlamat, setNewAlamat] = useState(Alamat);
-  const [newRT, setNewRT] = useState(RT);
-  const [newRW, setNewRW] = useState(RW);
-  const [newJenisKelamin, setNewJenisKelamin] = useState(JenisKelamin);
-  const [newKelurahanDesa, setNewKelurahan_desa] = useState(KelurahanDesa);
-  const [newKecamatan, setNewKecamatan] = useState(Kecamatan);
-  const [newNIK, setNewNIK] = useState(NIK);
-  const [newEmail, setNewEmail] = useState(email);
-  const [newRiwayatPenyakit, setNewRiwayatPenyakit] = useState(riwayatPenyakit);
-  const [newStatus, setNewStatus] = useState(pasienStatus);
-  const [newAgama, setNewAgama] = useState(Agama);
-  const [newKewarganegaraan, setNewKewarganegaraan] = useState(Kewarganegaraan);
-  const [newPekerjaan, setNewPekerjaan] = useState(Pekerjaan);
+const Profile = (): React.ReactElement => {
   const router = useRouter();
   // const [patients, setPatients] = useState<Pasiens[]>([]);
   // const [selectedPatient, setSelectedPatient] = useState<Pasiens | null>(null);
   const [isMutating, setIsMutating] = useState(false);
   const { data: session, status: sessionStatus } = useSession();
-
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    setIsMutating(true);
-
-    try {
-      const res = await fetch(`http://localhost:3000/api/topics/${_id}`, {
-        method: "PUT",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify({
-          newNama,
-          newTTL,
-          newAlamat,
-          newRT,
-          newRW,
-          newJenisKelamin,
-          newKelurahanDesa,
-          newKecamatan,
-          newNIK,
-          newEmail,
-          newRiwayatPenyakit,
-          newStatus,
-          newAgama,
-          newKewarganegaraan,
-          newPekerjaan,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to update Patient");
-      }
-      router.refresh();
-      alert(`Data Uppdated!`);
-      router.push("/admin/dashboard/dataPage");
-    } catch (error) {
-      console.log(error);
-    }
-  };
 
   return <section></section>;
 };
@@ -191,11 +81,11 @@ export default function ProfilePage() {
                           <div>
                             {!session ? (
                               <div className="mb-4 text-[32px] font-semibold leading-10 tracking-wider text-black">
-                                Undefined User
+                                Naufal Nabil Ramadhan
                               </div>
                             ) : (
                               <div className="mb-4 text-[32px] font-semibold leading-10 tracking-wider text-black">
-                                {session.user?.email}
+                                {/* {session.user?.email} */}
                               </div>
                             )}
                           </div>
