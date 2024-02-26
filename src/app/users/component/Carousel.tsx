@@ -185,7 +185,7 @@ export default function Carousel({ imageURL }: any) {
                 // style={{ backgroundImage: `url('${imageURL}')` }}
               >
                 <h1 className=" mb-36 mt-16 text-4xl font-extrabold leading-none tracking-tight text-slate-200 md:text-5xl lg:text-6xl">
-                  Ayo jadwalkan chek-up kesehatan Anda sekarang juga!
+                  Ayo jadwalkan check-up kesehatan Anda sekarang juga!
                 </h1>
 
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
