@@ -9,7 +9,7 @@ import { signOut, useSession } from "next-auth/react";
 export default function NavBar() {
   return (
     <>
-      <nav className=" border-gray-200- fixed start-0 top-0 z-20 w-full border-b bg-primary-1000 dark:border-gray-600 dark:bg-gray-900 shadow-md">
+      <nav className=" border-gray-200- fixed start-0 top-0 z-20 w-full border-b bg-primary-1000 shadow-md dark:border-gray-600 dark:bg-gray-900">
         <div className="mx-auto flex max-w-screen-xl flex-wrap items-center justify-between p-4">
           <a
             href="#"
@@ -154,7 +154,7 @@ export default function NavBar() {
                   </p>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"/users/about"} className="group block px-3 py-2">
                   <svg
                     width="18"
@@ -187,7 +187,7 @@ export default function NavBar() {
                     About
                   </p>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={"/users/profile"} className="group block px-3 py-2">
                   <svg

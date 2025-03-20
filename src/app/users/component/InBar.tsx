@@ -102,7 +102,7 @@ export default function InBar() {
                   </p>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={"/users/about"} className="group block px-3 py-2">
                   <svg
                     width="18"
@@ -135,7 +135,7 @@ export default function InBar() {
                     About
                   </p>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href={"/users/profile"} className="group block px-3 py-2">
                   <svg
